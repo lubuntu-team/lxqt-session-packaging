@@ -1,3 +1,15 @@
+lxqt-session (0.8.0-1) unstable; urgency=medium
+
+  * Upstream version 0.8.0
+  * Min liblxqt-qt5-0-dev version 0.8.0
+  * Min Qt version 5.3.2
+  * bump standards to 3.9.6
+  * modify debian/rules to provide LIB_SUFFIX 
+  * lintian-overrides for missed manpages and invalid category
+  * short descriptions and descriptions fixed
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 19 Oct 2014 18:06:19 +0200
+
 lxqt-session (0.7.96-1) unstable; urgency=low
 
   * Initial release (Closes: #747608)
