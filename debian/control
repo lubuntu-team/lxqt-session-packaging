@@ -40,7 +40,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends},
  x11-xkb-utils,
-Description: Session manager component for LXQt
+Description: session manager component for LXQt
  LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
  technologies.  It has been tailored for users who value simplicity, speed, and
  an intuitive interface.  Unlike most desktop environments, LXQt also works
@@ -57,7 +57,7 @@ Replaces: lxqt-session-qt5-dbg (<< 0.9.0)
 Depends:
  ${misc:Depends},
  lxqt-session (= ${binary:Version}),
-Description: Session manager component for LXQt (debug symbols)
+Description: session manager component for LXQt (debug symbols)
  LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
  technologies. It has been tailored for users who value simplicity, speed, and
  an intuitive interface. Unlike most desktop environments, LXQt also works
