@@ -34,7 +34,7 @@ Replaces:
  lxqt-session-qt5 (<< 0.9.0),
  lxqt-power (<< 0.9.0),
  lxqt-appswitcher (<< 0.9.0),
-Pre-Depends: 
+Pre-Depends:
  lxqt-common,
 Depends:
  ${misc:Depends},
