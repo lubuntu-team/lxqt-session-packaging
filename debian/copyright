@@ -22,10 +22,26 @@ Files: lxqt-config-session/basicsettings.*
 Copyright: Copyright 2010-2012 LxQt team
 License: LGPL-2.1+
 
+Files: lxqt-leave/leavedialog.*
+Copyright: 2010-2015 LXQt team
+License: LGPL-2.1+
+
+Files: lxqt-session/src/UdevNotifier.*
+       lxqt-session/src/lxqtmodman.*
+       lxqt-session/src/sessiondbusadaptor.h
+       lxqt-session/src/windowmanager.*
+       lxqt-session/src/wmselectdialog.*
+Copyright: Copyright: 2010-2015 LXQt team
+License: LGPL-2.1+
+
+Files: lxqt-session/src/sessionapplication.*
+Copyright: Copyright (C) 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
+License: LGPL-2.1+
 
 Files: debian/*
 Copyright: 2014-2015 Alf Gaida <agaida@siduction.org>
            2015      Andrew Lee (李健秋) <ajqlee@debian.org>
+           2015      ChangZhuo Chen (陳昌倬) <czchen@gmail.com>
 License: LGPL-2.1+
 
 License: LGPL-2.1+
