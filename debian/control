@@ -5,8 +5,8 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
            Andrew Lee (李健秋) <ajqlee@debian.org>
 Section: x11
 Priority: optional
-Build-Depends: cmake (>= 3.0.2),
-               debhelper (>= 9),
+Build-Depends: debhelper (>= 9),
+               cmake (>= 3.0.2),
                libkf5windowsystem-dev,
                liblxqt0-dev,
                libqt5x11extras5-dev,
@@ -42,8 +42,6 @@ Section: debug
 Priority: extra
 Depends: ${misc:Depends},
          lxqt-session (= ${binary:Version})
-Breaks: lxqt-session-qt5-dbg (<< 0.9.0)
-Replaces: lxqt-session-qt5-dbg (<< 0.9.0)
 Description: session manager component for LXQt (debug symbols)
  LXQt is an advanced, easy-to-use, and fast desktop environment based on
  Qt technologies. It has been tailored for users who value simplicity,
