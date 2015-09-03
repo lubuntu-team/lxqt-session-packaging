@@ -2,6 +2,7 @@ lxqt-session (0.9.0+20150831-1) UNRELEASED; urgency=medium
 
   * Cherry-picking upstream version 0.9.0+20150831.
   * added upstream signing key and use it in watch file
+  * add some lintian-overrides 
 
  -- Alf Gaida <agaida@siduction.org>  Thu, 03 Sep 2015 22:31:45 +0200
 
