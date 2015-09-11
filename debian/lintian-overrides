@@ -1,0 +1,6 @@
+# category LXQt in not yet in freedesktop specs - no bug
+lxqt-session: desktop-entry-invalid-category LXQt usr/share/applications/lxqt-*.desktop
+
+# will be obsoleted with the next snapshot
+lxqt-session: desktop-entry-lacks-main-category usr/share/applications/lxqt-*.desktop
+
