@@ -9,6 +9,7 @@ if(NOT DEFINED LIBUDEV_MONITOR OR LIBUDEV_MONITOR)
 
     find_package(PkgConfig)
     pkg_check_modules(LIBUDEV REQUIRED libudev)
+    include_directories(${LIBUDEV_INCLUDE_DIRS})
 
     add_definitions(-DWITH_LIBUDEV_MONITOR)
 endif()
@@ -30,6 +31,8 @@ set(lxqt-session_SRCS
     src/windowmanager.cpp
     src/sessionapplication.cpp
     src/sessiondbusadaptor.h
+    src/numlock.cpp
+    src/numlock.h
 )
 if(LIBUDEV_MONITOR)
     list(APPEND lxqt-session_SRCS src/UdevNotifier.cpp)
@@ -63,13 +66,13 @@ target_link_libraries(lxqt-session
     Qt5::Widgets
     Qt5::DBus
     Qt5::X11Extras
-    ${XCB_LIBRARIES}
-    ${X11_LIBRARIES}
+    ${XCB_LDFLAGS}
+    X11
     lxqt
     KF5::WindowSystem
 )
 if(LIBUDEV_MONITOR)
-    target_link_libraries(lxqt-session ${LIBUDEV_LIBRARIES})
+    target_link_libraries(lxqt-session ${LIBUDEV_LDFLAGS})
 endif()
 
 INSTALL(TARGETS
