@@ -1,8 +1,10 @@
-lxqt-session (0.9.0+20151023-1) unstable; urgency=medium
+lxqt-session (0.9.0+20151031-1) experimental; urgency=medium
 
-  * Cherry-picking upstream version 0.9.0+20151023.
+  * Cherry-picking upstream version 0.9.0+20151031.
+  * set new minimal versions for liblxqt and libqtxdg
   * Added upstream signing key and use it in watch file
   * Added lintian-overrides for invalid category
+  * fix some wording of debian/copyright
   * Fixed some copyright dates
 
  -- Alf Gaida <agaida@siduction.org>  Sat, 24 Oct 2015 13:00:16 +0200

@@ -37,6 +37,7 @@
 #include "autostartpage.h"
 #include "defaultappspage.h"
 #include "environmentpage.h"
+#include "userlocationspage.h"
 
 
 SessionConfigWindow::SessionConfigWindow() :
@@ -51,8 +52,15 @@ SessionConfigWindow::SessionConfigWindow() :
     DefaultApps* defaultApps = new DefaultApps(this);
     addPage(defaultApps, tr("Default Applications"), "preferences-desktop-filetype-association");
 
+    UserLocationsPage* userLocations = new UserLocationsPage(this);
+    addPage(userLocations, tr("Locations"), QStringLiteral("folder"));
+    connect(userLocations, SIGNAL(needRestart()), SLOT(setRestart()));
+    connect(this, SIGNAL(reset()), userLocations, SLOT(restoreSettings()));
+    connect(this, SIGNAL(save()), userLocations, SLOT(save()));
+
     AutoStartPage* autoStart = new AutoStartPage(this);
     addPage(autoStart, tr("Autostart"), "preferences-desktop-launch-feedback");
+    connect(autoStart, SIGNAL(needRestart()), SLOT(setRestart()));
     connect(this, SIGNAL(reset()), autoStart, SLOT(restoreSettings()));
     connect(this, SIGNAL(save()), autoStart, SLOT(save()));
 
@@ -82,9 +90,7 @@ void SessionConfigWindow::closeEvent(QCloseEvent * event)
     LXQt::ConfigDialog::closeEvent(event);
     if (m_restart) {
         QMessageBox::information(this, tr("Session Restart Required"),
-                                tr("You need to restart desktop session (lxqt-session) "
-                                    "to reload settings. Use logout from the main menu."
-                                    )
+                                tr("Some settings will not take effect until the next log in.")
                                 );
     }
 }

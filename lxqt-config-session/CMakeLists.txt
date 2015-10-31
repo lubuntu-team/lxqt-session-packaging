@@ -9,8 +9,10 @@ set(lxqt-sessioncfg_HDRS
     autostartmodel.h
     autostartitem.h
     autostartedit.h
+    autostartutils.h
     defaultappspage.h
     environmentpage.h
+    userlocationspage.h
 )
 
 set(lxqt-sessioncfg_SRCS
@@ -22,8 +24,10 @@ set(lxqt-sessioncfg_SRCS
     autostartmodel.cpp
     autostartitem.cpp
     autostartedit.cpp
+    autostartutils.cpp
     defaultappspage.cpp
     environmentpage.cpp
+    userlocationspage.cpp
     ../lxqt-session/src/windowmanager.cpp
 )
 
@@ -74,5 +78,10 @@ install(FILES
         ${lxqt-sessioncfg_DESKTOP_FILES}
     DESTINATION
          "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)
+install(FILES
+    man/lxqt-config-session.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )
