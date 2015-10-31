@@ -4,7 +4,7 @@ if(NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE Release)
 endif()
 
-if(NOT DEFINED LIBUDEV_MONITOR OR LIBUDEV_MONITOR)
+if(LIBUDEV_MONITOR)
     set(LIBUDEV_MONITOR Yes)
 
     find_package(PkgConfig)
@@ -78,5 +78,10 @@ endif()
 INSTALL(TARGETS
     lxqt-session
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    man/lxqt-session.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )
