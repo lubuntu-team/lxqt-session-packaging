@@ -1,3 +1,11 @@
+lxqt-session (0.9.0+20151031-2) experimental; urgency=medium
+
+  * rename lxqt-session.manpages to manpages 
+  * allow build on non-linux platforms (Thanks Pino Toscano)
+    (Closes: #803656) 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 01 Nov 2015 19:39:39 +0100
+
 lxqt-session (0.9.0+20151031-1) experimental; urgency=medium
 
   * Cherry-picking upstream version 0.9.0+20151031.
