@@ -3,15 +3,15 @@ Upstream-Name: lxqt-session
 Source: https://github.com/lxde/lxqt-session
 
 Files: *
-Copyright: Copyright (c) 2010-2012 Razor team
-           Copyright (c) 2012-2014 LXQt team
+Copyright: 2010-2012 Razor team
+           2012-2015 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-config-session/autostartedit.*
        lxqt-config-session/autostartitem.*
        lxqt-config-session/autostartpage.*
        lxqt-config-session/modulemodel.*
-Copyright: Copyright (C) 2011-2012  Alec Moskvin <alecm@gmx.com>
+Copyright: 2011-2012 Alec Moskvin <alecm@gmx.com>
 License: LGPL-2.1+
 
 Files: lxqt-config-session/basicsettings.*
@@ -19,7 +19,7 @@ Files: lxqt-config-session/basicsettings.*
        lxqt-config-session/environmentpage.*
        lxqt-config-session/main.cpp
        lxqt-config-session/sessionconfigwindow.*
-Copyright: Copyright 2010-2012 LxQt team
+Copyright: 2010-2015 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-leave/leavedialog.*
@@ -31,11 +31,11 @@ Files: lxqt-session/src/UdevNotifier.*
        lxqt-session/src/sessiondbusadaptor.h
        lxqt-session/src/windowmanager.*
        lxqt-session/src/wmselectdialog.*
-Copyright: Copyright: 2010-2015 LXQt team
+Copyright: 2010-2015 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-session/src/sessionapplication.*
-Copyright: Copyright (C) 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
+Copyright: 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
 License: LGPL-2.1+
 
 Files: debian/*
