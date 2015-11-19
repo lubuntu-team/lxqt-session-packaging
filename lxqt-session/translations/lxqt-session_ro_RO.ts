@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ro_RO">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
         <source>Application &apos;%1&apos; crashed too many times. Its autorestart has been disabled for current session.</source>
         <translation type="vanished">Aplicația &apos;%1&apos; a eșuat de prea multe ori. Repornirea automată a acestei aplicații a fost dezactivată pentru sesiunea curentă.</translation>
@@ -21,8 +21,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Bine ați venit în LXQt</translation>
+        <translation>Bine ați venit în LXQt</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -41,11 +42,6 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
         <translation>Alegeți favoritul dvs.</translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.ui" line="20"/>

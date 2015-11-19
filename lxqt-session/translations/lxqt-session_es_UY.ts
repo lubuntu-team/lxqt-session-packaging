@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="es_UY">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
         <location filename="../src/lxqtmodman.cpp" line="289"/>
         <source>Crash Report</source>
@@ -17,8 +17,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Bienvenido a LXQt</translation>
+        <translation>Bienvenido a LXQt</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -29,8 +30,8 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
 Antes de empezar a usar LXQt puede querer seleccionar el administrador de ventanas:</translation>
     </message>
     <message>
-        <source>You can change the Window Manager later at any time via LxQt Session Configurator.</source>
-        <translation type="vanished">Puede cambiar el administrador de ventanas más adelante en cualquier momento usando el Configurador de Sesiones de LxQt.</translation>
+        <source>You can change the Window Manager later at any time via LXQt Session Configurator.</source>
+        <translation type="vanished">Puede cambiar el administrador de ventanas más adelante en cualquier momento usando el Configurador de Sesiones de LXQt.</translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.cpp" line="62"/>
@@ -40,11 +41,6 @@ Antes de empezar a usar LXQt puede querer seleccionar el administrador de ventan
     <message>
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

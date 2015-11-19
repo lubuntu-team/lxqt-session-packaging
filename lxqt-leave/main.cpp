@@ -25,7 +25,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/Application>
+#include <LXQt/SingleApplication>
 #include <LXQt/PowerManager>
 #include <LXQt/ScreenSaver>
 #include <LXQt/Translator>
@@ -37,11 +37,11 @@
 
 int main(int argc, char *argv[])
 {
-    LxQt::Application a(argc, argv);
-    LxQt::Translator::translateApplication();
+    LXQt::SingleApplication a(argc, argv);
+    LXQt::Translator::translateApplication();
 
-    LxQt::PowerManager powermanager(&a);
-    LxQt::ScreenSaver screensaver(&a);
+    LXQt::PowerManager powermanager(&a);
+    LXQt::ScreenSaver screensaver(&a);
 
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("lxqt-leave"));
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     }
 
     if (parser.isSet(lockscreenOption)) {
-        a.connect(&screensaver, &LxQt::ScreenSaver::done, &a, &LxQt::Application::quit);
+        a.connect(&screensaver, &LXQt::ScreenSaver::done, &a, &LXQt::Application::quit);
         screensaver.lockScreen();
         a.exec();
         return 0;
@@ -101,6 +101,7 @@ int main(int argc, char *argv[])
     }
 
     LeaveDialog dialog;
+    a.setActivationWindow(&dialog);
     dialog.setGeometry(QStyle::alignedRect(Qt::LeftToRight,
                 Qt::AlignCenter,
                 dialog.size(),

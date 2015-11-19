@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="hu">
+<TS version="2.1" language="hu">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
         <location filename="../src/lxqtmodman.cpp" line="289"/>
         <source>Crash Report</source>

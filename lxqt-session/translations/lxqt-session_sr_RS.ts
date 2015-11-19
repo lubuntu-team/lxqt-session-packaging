@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sr_RS">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
         <location filename="../src/lxqtmodman.cpp" line="289"/>
         <source>Crash Report</source>
@@ -17,8 +17,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Добро дошли у Рејзор-кјут</translation>
+        <translation>Добро дошли у Рејзор-кјут</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -29,7 +30,7 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
 Пре него почнете да користите Рејзор-кјут морате да изаберете менаџер прозора:</translation>
     </message>
     <message>
-        <source>You can change the Window Manager later at any time via LxQt Session Configurator.</source>
+        <source>You can change the Window Manager later at any time via LXQt Session Configurator.</source>
         <translation type="vanished">Можете да промените менаџера прозора касније помоћу Рејзоровог Подешавања сесије.</translation>
     </message>
     <message>
@@ -40,11 +41,6 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
     <message>
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

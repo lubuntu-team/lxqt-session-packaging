@@ -2,10 +2,10 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="cs_CZ">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
-        <source>LxQt Session Crash Report</source>
-        <translation type="vanished">Zpráva o pádu sezení LxQtu</translation>
+        <source>LXQt Session Crash Report</source>
+        <translation type="vanished">Zpráva o pádu sezení LXQtu</translation>
     </message>
     <message>
         <source>Application &apos;%1&apos; crashed too many times. Its autorestart has been disabled for current session.</source>
@@ -25,8 +25,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Vítejte v LxQtu</translation>
+        <translation>Vítejte v LXQtu</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -37,7 +38,7 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
 Než LXQt začnete používat, vyberte si správce oken:</translation>
     </message>
     <message>
-        <source>You can change the Window Manager later at any time via LxQt Session Configurator.</source>
+        <source>You can change the Window Manager later at any time via LXQt Session Configurator.</source>
         <translation type="vanished">Správce oken můžete později změnit v nastavení sezení.</translation>
     </message>
     <message>
@@ -49,11 +50,6 @@ Než LXQt začnete používat, vyberte si správce oken:</translation>
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
         <translation>Vyberte oblíbené.</translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.ui" line="20"/>

@@ -2,10 +2,10 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="lt">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
-        <source>LxQt Session Crash Report</source>
-        <translation type="vanished">Pranešimas apie LxQt sesijų lūžimus</translation>
+        <source>LXQt Session Crash Report</source>
+        <translation type="vanished">Pranešimas apie LXQt sesijų lūžimus</translation>
     </message>
     <message>
         <source>Application &apos;%1&apos; crashed too many times. Its autorestart has been disabled for current session.</source>
@@ -25,8 +25,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Jus sveikina LXQt</translation>
+        <translation>Jus sveikina LXQt</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -37,8 +38,8 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
 Prieš pradėdami dirbti LXQt aplinkoje, pasirinkite norimą langų tvarkyklę.</translation>
     </message>
     <message>
-        <source>You can change the Window Manager later at any time via LxQt Session Configurator.</source>
-        <translation type="vanished">Langų tvarkyklę bet kada vėliau galėsite pasikeisti LxQt sesijų konfigūracijoje.</translation>
+        <source>You can change the Window Manager later at any time via LXQt Session Configurator.</source>
+        <translation type="vanished">Langų tvarkyklę bet kada vėliau galėsite pasikeisti LXQt sesijų konfigūracijoje.</translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.cpp" line="62"/>
@@ -49,11 +50,6 @@ Prieš pradėdami dirbti LXQt aplinkoje, pasirinkite norimą langų tvarkyklę.<
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
         <translation>Pasirinkite norimą.</translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.ui" line="20"/>

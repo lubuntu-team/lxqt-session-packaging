@@ -2,10 +2,10 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="es_VE">
 <context>
-    <name>LxQtModuleManager</name>
+    <name>LXQtModuleManager</name>
     <message>
-        <source>LxQt Session Crash Report</source>
-        <translation type="vanished">Reporte de fallos de LxQt Session</translation>
+        <source>LXQt Session Crash Report</source>
+        <translation type="vanished">Reporte de fallos de LXQt Session</translation>
     </message>
     <message>
         <source>Application &apos;%1&apos; crashed too many times. Its autorestart has been disabled for current session.</source>
@@ -25,8 +25,9 @@
 <context>
     <name>WmSelectDialog</name>
     <message>
+        <location filename="../src/wmselectdialog.ui" line="14"/>
         <source>Welcome to LXQt</source>
-        <translation type="vanished">Bienvenido a LXQt</translation>
+        <translation>Bienvenido a LXQt</translation>
     </message>
     <message>
         <source>&lt;b&gt;Welcome to LXQt&lt;/b&gt;
@@ -37,8 +38,8 @@ Before starting to use the LXQt, you might want to select the Windows Manager:</
 Antes de empezar a usar LXQt puede querer seleccionar el administrador de ventanas:</translation>
     </message>
     <message>
-        <source>You can change the Window Manager later at any time via LxQt Session Configurator.</source>
-        <translation type="vanished">Puede cambiar el administrador de ventanas más adelante en cualquier momento usando el Configurador de Sesiones de LxQt.</translation>
+        <source>You can change the Window Manager later at any time via LXQt Session Configurator.</source>
+        <translation type="vanished">Puede cambiar el administrador de ventanas más adelante en cualquier momento usando el Configurador de Sesiones de LXQt.</translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.cpp" line="62"/>
@@ -49,11 +50,6 @@ Antes de empezar a usar LXQt puede querer seleccionar el administrador de ventan
         <location filename="../src/wmselectdialog.cpp" line="63"/>
         <source>Choose your favorite one.</source>
         <translation>Escoja su favorito.</translation>
-    </message>
-    <message>
-        <location filename="../src/wmselectdialog.ui" line="14"/>
-        <source>Welcome to LXQt</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/wmselectdialog.ui" line="20"/>

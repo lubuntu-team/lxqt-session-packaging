@@ -1,10 +1,10 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LxQt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org, http://lxde.org/
  *
- * Copyright: 2010-2012 LxQt team
+ * Copyright: 2010-2012 LXQt team
  * Authors:
  *   Petr Vanek <petr@scribus.info>
  *
@@ -28,7 +28,7 @@
 #include "environmentpage.h"
 #include "ui_environmentpage.h"
 
-EnvironmentPage::EnvironmentPage(LxQt::Settings *settings, QWidget *parent) :
+EnvironmentPage::EnvironmentPage(LXQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
     m_settings(settings),
     ui(new Ui::EnvironmentPage)
@@ -73,14 +73,33 @@ void EnvironmentPage::restoreSettings()
 
 void EnvironmentPage::save()
 {
+    bool doRestart = false;
+    QMap<QString, QString> oldSettings;
+
     m_settings->beginGroup("Environment");
+
+    /* We erase the Enviroment group and them write the Ui settings. To know if
+       they changed or not we need to save them to memory.
+     */
+    foreach (const QString &key, m_settings->childKeys())
+        oldSettings[key] = m_settings->value(key, QString()).toString();
     m_settings->remove("");
+
     for(int i = 0; i < ui->treeWidget->topLevelItemCount(); ++i)
     {
         QTreeWidgetItem *item = ui->treeWidget->topLevelItem(i);
+        const QString key = item->text(0);
+        const QString value = item->text(1);
+
+        if (oldSettings.value(key) != value)
+            doRestart = true;
+
         m_settings->setValue(item->text(0), item->text(1));
     }
     m_settings->endGroup();
+
+    if (doRestart)
+        emit needRestart();
 }
 
 void EnvironmentPage::addButton_clicked()
@@ -89,7 +108,6 @@ void EnvironmentPage::addButton_clicked()
     item->setFlags(item->flags() | Qt::ItemIsEditable);
     ui->treeWidget->addTopLevelItem(item);
     ui->treeWidget->setCurrentItem(item);
-    emit needRestart();
 }
 
 void EnvironmentPage::deleteButton_clicked()
@@ -99,14 +117,12 @@ void EnvironmentPage::deleteButton_clicked()
         emit envVarChanged(item->text(0), "");
         delete item;
     }
-    emit needRestart();
 }
 
 void EnvironmentPage::itemChanged(QTreeWidgetItem *item, int column)
 {
     Q_UNUSED(column);
     emit envVarChanged(item->text(0), item->text(1));
-    emit needRestart();
 }
 
 void EnvironmentPage::updateItem(const QString& var, const QString& val)
@@ -127,5 +143,4 @@ void EnvironmentPage::updateItem(const QString& var, const QString& val)
         else
             delete item;
     }
-    emit needRestart();
 }

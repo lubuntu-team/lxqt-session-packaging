@@ -1,10 +1,10 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LxQt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org, http://lxde.org/
  *
- * Copyright: 2010-2011 LxQt team
+ * Copyright: 2010-2011 LXQt team
  * Authors:
  *   Petr Vanek <petr@scribus.info>
  *
@@ -37,10 +37,11 @@
 #include "autostartpage.h"
 #include "defaultappspage.h"
 #include "environmentpage.h"
+#include "userlocationspage.h"
 
 
 SessionConfigWindow::SessionConfigWindow() :
-      LxQt::ConfigDialog(tr("LXQt Session Settings"), new LxQt::Settings("session"), 0)
+      LXQt::ConfigDialog(tr("LXQt Session Settings"), new LXQt::Settings("session"), 0)
 {
     BasicSettings* basicSettings = new BasicSettings(mSettings, this);
     addPage(basicSettings, tr("Basic Settings"), "preferences-desktop-display-color");
@@ -51,8 +52,15 @@ SessionConfigWindow::SessionConfigWindow() :
     DefaultApps* defaultApps = new DefaultApps(this);
     addPage(defaultApps, tr("Default Applications"), "preferences-desktop-filetype-association");
 
+    UserLocationsPage* userLocations = new UserLocationsPage(this);
+    addPage(userLocations, tr("Locations"), QStringLiteral("folder"));
+    connect(userLocations, SIGNAL(needRestart()), SLOT(setRestart()));
+    connect(this, SIGNAL(reset()), userLocations, SLOT(restoreSettings()));
+    connect(this, SIGNAL(save()), userLocations, SLOT(save()));
+
     AutoStartPage* autoStart = new AutoStartPage(this);
     addPage(autoStart, tr("Autostart"), "preferences-desktop-launch-feedback");
+    connect(autoStart, SIGNAL(needRestart()), SLOT(setRestart()));
     connect(this, SIGNAL(reset()), autoStart, SLOT(restoreSettings()));
     connect(this, SIGNAL(save()), autoStart, SLOT(save()));
 
@@ -79,12 +87,10 @@ SessionConfigWindow::~SessionConfigWindow()
 
 void SessionConfigWindow::closeEvent(QCloseEvent * event)
 {
-    LxQt::ConfigDialog::closeEvent(event);
+    LXQt::ConfigDialog::closeEvent(event);
     if (m_restart) {
         QMessageBox::information(this, tr("Session Restart Required"),
-                                tr("You need to restart desktop session (lxqt-session) "
-                                    "to reload settings. Use logout from the main menu."
-                                    )
+                                tr("Some settings will not take effect until the next log in.")
                                 );
     }
 }

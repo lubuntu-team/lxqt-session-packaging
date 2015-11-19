@@ -37,26 +37,22 @@
 <context>
     <name>AutoStartItemModel</name>
     <message>
-        <location filename="../autostartmodel.cpp" line="177"/>
+        <location filename="../autostartmodel.cpp" line="192"/>
         <source>Global Autostart</source>
         <translation>全体的な自動起動</translation>
     </message>
     <message>
-        <source>LxQt Autostart</source>
-        <translation type="vanished">LxQt自動起動</translation>
-    </message>
-    <message>
-        <location filename="../autostartmodel.cpp" line="179"/>
+        <location filename="../autostartmodel.cpp" line="194"/>
         <source>LXQt Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt自動起動</translation>
     </message>
     <message>
-        <location filename="../autostartmodel.cpp" line="197"/>
+        <location filename="../autostartmodel.cpp" line="212"/>
         <source>Location: %1</source>
         <translation>位置:%1</translation>
     </message>
     <message>
-        <location filename="../autostartmodel.cpp" line="199"/>
+        <location filename="../autostartmodel.cpp" line="214"/>
         <source>Overrides: %1</source>
         <translation>上書き:%1</translation>
     </message>
@@ -84,18 +80,23 @@
         <translation>アプリケーション自動起動</translation>
     </message>
     <message>
-        <location filename="../autostartpage.cpp" line="82"/>
+        <location filename="../autostartpage.cpp" line="141"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../autostartpage.cpp" line="82"/>
+        <location filename="../autostartpage.cpp" line="141"/>
         <source>File &apos;%1&apos; already exists!</source>
         <translation>File&apos;%1&apos;は既にあります!</translation>
     </message>
 </context>
 <context>
     <name>BasicSettings</name>
+    <message>
+        <location filename="../basicsettings.ui" line="23"/>
+        <source>Basic Settings</source>
+        <translation>基本的な設定</translation>
+    </message>
     <message>
         <location filename="../basicsettings.ui" line="30"/>
         <source>Window Manager</source>
@@ -109,35 +110,30 @@
     <message>
         <location filename="../basicsettings.ui" line="59"/>
         <source>LXQt Modules</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../basicsettings.ui" line="111"/>
-        <source>Leave Session</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../basicsettings.ui" line="117"/>
-        <source>Ask confirmation to leave session</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../basicsettings.ui" line="23"/>
-        <source>Basic Settings</source>
-        <translation>基本的な設定</translation>
+        <translation>LXQtモジュール</translation>
     </message>
     <message>
         <location filename="../basicsettings.ui" line="65"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>開始</translation>
     </message>
     <message>
         <location filename="../basicsettings.ui" line="72"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>終了</translation>
     </message>
     <message>
-        <location filename="../basicsettings.cpp" line="84"/>
+        <location filename="../basicsettings.ui" line="111"/>
+        <source>Leave Session</source>
+        <translation>セッションの終了</translation>
+    </message>
+    <message>
+        <location filename="../basicsettings.ui" line="117"/>
+        <source>Ask for confirmation to leave session</source>
+        <translation>セッション終了時に確認する</translation>
+    </message>
+    <message>
+        <location filename="../basicsettings.cpp" line="137"/>
         <source>Select a window manager</source>
         <translation>ウィンドウマネージャの選択</translation>
     </message>
@@ -165,7 +161,7 @@
     <message>
         <location filename="../defaultappspage.ui" line="32"/>
         <source>Terminal Emulation:</source>
-        <translation>ターミネルのエミュレーション</translation>
+        <translation>ターミナルエミュレーション:</translation>
     </message>
     <message>
         <location filename="../defaultappspage.ui" line="52"/>
@@ -182,27 +178,27 @@
 <context>
     <name>EnvironmentPage</name>
     <message>
-        <location filename="../environmentpage.ui" line="30"/>
+        <location filename="../environmentpage.ui" line="17"/>
         <source>Add</source>
         <translation>追加</translation>
     </message>
     <message>
-        <location filename="../environmentpage.ui" line="37"/>
+        <location filename="../environmentpage.ui" line="24"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../environmentpage.ui" line="63"/>
+        <location filename="../environmentpage.ui" line="50"/>
         <source>Environment Variables (Advanced)</source>
         <translation>環境変数(詳細)</translation>
     </message>
     <message>
-        <location filename="../environmentpage.ui" line="74"/>
+        <location filename="../environmentpage.ui" line="61"/>
         <source>Variable Name</source>
         <translation>変数名</translation>
     </message>
     <message>
-        <location filename="../environmentpage.ui" line="79"/>
+        <location filename="../environmentpage.ui" line="66"/>
         <source>Value</source>
         <translation>値</translation>
     </message>
@@ -210,51 +206,122 @@
 <context>
     <name>ModuleModel</name>
     <message>
-        <location filename="../modulemodel.cpp" line="85"/>
+        <location filename="../modulemodel.cpp" line="86"/>
         <source>Running</source>
-        <translation type="unfinished"></translation>
+        <translation>実行中</translation>
     </message>
 </context>
 <context>
     <name>SessionConfigWindow</name>
     <message>
-        <source>LxQt Session Configuration</source>
-        <translation type="vanished">LxQtセッションの設定</translation>
-    </message>
-    <message>
-        <location filename="../sessionconfigwindow.cpp" line="43"/>
+        <location filename="../sessionconfigwindow.cpp" line="44"/>
         <source>LXQt Session Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQtセッションの設定</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="46"/>
+        <location filename="../sessionconfigwindow.cpp" line="47"/>
         <source>Basic Settings</source>
         <translation>基本設定</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="52"/>
+        <location filename="../sessionconfigwindow.cpp" line="53"/>
         <source>Default Applications</source>
         <translation>既定のアプリケーション</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="55"/>
+        <location filename="../sessionconfigwindow.cpp" line="56"/>
+        <source>Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sessionconfigwindow.cpp" line="62"/>
         <source>Autostart</source>
         <translation>自動起動</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="60"/>
+        <location filename="../sessionconfigwindow.cpp" line="68"/>
         <source>Environment (Advanced)</source>
         <translation>環境(詳細)</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="84"/>
+        <location filename="../sessionconfigwindow.cpp" line="92"/>
         <source>Session Restart Required</source>
         <translation>セッション再起動の要求</translation>
     </message>
     <message>
-        <location filename="../sessionconfigwindow.cpp" line="85"/>
+        <location filename="../sessionconfigwindow.cpp" line="93"/>
+        <source>Some settings will not take effect until the next log in.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>You need to restart desktop session (lxqt-session) to reload settings. Use logout from the main menu.</source>
-        <translation>デスクトップセッション(lxqt-session)を再起動する必要があります。メインメニューからログアウトしてください。</translation>
+        <translation type="vanished">デスクトップセッション(lxqt-session)を再起動する必要があります。メインメニューからログアウトしてください。</translation>
+    </message>
+</context>
+<context>
+    <name>UserLocationsPage</name>
+    <message>
+        <location filename="../userlocationspage.cpp" line="99"/>
+        <source>Locations for Personal Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="160"/>
+        <source>LXQt Session Settings - Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="161"/>
+        <source>An error ocurred while applying the settings for the %1 location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="177"/>
+        <source>Choose Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UserLocationsPrivate</name>
+    <message>
+        <location filename="../userlocationspage.cpp" line="59"/>
+        <source>Desktop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="60"/>
+        <source>Downloads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="61"/>
+        <source>Templates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="62"/>
+        <source>Public Share</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="63"/>
+        <source>Documents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="64"/>
+        <source>Music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="65"/>
+        <source>Pictures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../userlocationspage.cpp" line="66"/>
+        <source>Videos</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
