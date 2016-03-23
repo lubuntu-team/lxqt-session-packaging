@@ -1,3 +1,13 @@
+lxqt-session (0.10.0-4) unstable; urgency=medium
+
+  * turn LIBUDEV_MONITOR on for linux, thanks RalfJ
+  * Fix years in copyright
+  * Bump Standards to 3.9.7
+  * Use secure VCS-Fields 
+  * Added hardening=+all 
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 23 Mar 2016 18:46:14 +0100
+
 lxqt-session (0.10.0-3) unstable; urgency=medium
 
   * Remove dbg package in favor of dbgsym.

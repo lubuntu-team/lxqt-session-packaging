@@ -2,10 +2,13 @@
 #export DH_VERBOSE=1
 
 DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-ifneq ($(DEB_HOST_ARCH_OS),linux)
-  CMAKE_ARGS += -DLIBUDEV_MONITOR=OFF
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+    CMAKE_ARGS += -DLIBUDEV_MONITOR=ON
+else
+    CMAKE_ARGS += -DLIBUDEV_MONITOR=OFF
 endif
 
 %:

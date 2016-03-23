@@ -4,7 +4,7 @@ Source: https://github.com/lxde/lxqt-session
 
 Files: *
 Copyright: 2010-2012 Razor team
-           2012-2015 LXQt team
+           2012-2016 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-config-session/autostartedit.*
@@ -19,11 +19,11 @@ Files: lxqt-config-session/basicsettings.*
        lxqt-config-session/environmentpage.*
        lxqt-config-session/main.cpp
        lxqt-config-session/sessionconfigwindow.*
-Copyright: 2010-2015 LXQt team
+Copyright: 2010-2016 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-leave/leavedialog.*
-Copyright: 2010-2015 LXQt team
+Copyright: 2010-2016 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-session/src/UdevNotifier.*
@@ -31,7 +31,7 @@ Files: lxqt-session/src/UdevNotifier.*
        lxqt-session/src/sessiondbusadaptor.h
        lxqt-session/src/windowmanager.*
        lxqt-session/src/wmselectdialog.*
-Copyright: 2010-2015 LXQt team
+Copyright: 2010-2016 LXQt team
 License: LGPL-2.1+
 
 Files: lxqt-session/src/sessionapplication.*
@@ -39,7 +39,7 @@ Copyright: 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
 License: LGPL-2.1+
 
 Files: debian/*
-Copyright: 2014-2015 Alf Gaida <agaida@siduction.org>
+Copyright: 2014-2016 Alf Gaida <agaida@siduction.org>
            2015      Andrew Lee (李健秋) <ajqlee@debian.org>
            2015      ChangZhuo Chen (陳昌倬) <czchen@debian.org>
 License: LGPL-2.1+
