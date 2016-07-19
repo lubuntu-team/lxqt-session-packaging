@@ -1,12 +1,13 @@
+
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org, http://lxde.org/
+ * http://lxqt.org
  *
- * Copyright: 2010-2015 LXQt team
+ * Copyright: 2016 LXQt team
  * Authors:
- *   Paulo Lieuthier <paulolieuthier@gmail.com>
+ *  Palo Kisa <palo.kisa@gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -25,41 +26,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef LEAVEDIALOG_H
-#define LEAVEDIALOG_H
+#include "log.h"
+#include <QtGlobal>
 
-#include "ui_leavedialog.h"
-
-#include <QDialog>
-#include <QDesktopWidget>
-#include <LXQt/Power>
-#include <LXQt/PowerManager>
-#include <LXQt/ScreenSaver>
-
-namespace Ui {
-    class LeaveDialog;
-}
-
-class LeaveDialog : public QDialog
-{
-    Q_OBJECT
-
-public:
-    explicit LeaveDialog(QWidget *parent = 0);
-    ~LeaveDialog();
-
-protected:
-    virtual void resizeEvent(QResizeEvent* event);
-
-private:
-    Ui::LeaveDialog *ui;
-    // LXQt::Power is used to know if the actions are doable, while
-    // LXQt::PowerManager is used to trigger the actions, while
-    // obeying the user option to ask or not for confirmation
-    LXQt::Power *mPower;
-    LXQt::PowerManager *mPowerManager;
-    LXQt::ScreenSaver *mScreensaver;
-};
-
-
+#if defined(NDEBUG)
+Q_LOGGING_CATEGORY(SESSION, "lxqt-session", QtInfoMsg)
+#else
+Q_LOGGING_CATEGORY(SESSION, "lxqt-session")
 #endif
