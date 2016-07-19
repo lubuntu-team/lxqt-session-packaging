@@ -1,3 +1,27 @@
+lxqt-session (0.10.96~46-g9309bb5-1) experimental; urgency=medium
+
+  * Cherry-picking upstream version 0.10.96~46-g9309bb5.
+  * Preparing the upcoming release, switch to experimental
+  * Added new build dependendies:
+    - gcc (>= 4:6)
+    - g++ (>= 4:6)
+    - libqt5xdgiconloader-dev (>= 1.3.1~)
+  * Minimum versions added
+  * Bumped Standards to 3.9.8, no changes needed
+  * Fixed VCS fields, using plain /git/
+  * Added build dependency xdg-user-dirs
+  * Move Pre-Depends lxqt-common to Depends 
+  * Added Depends x11-xkb-utils
+  * Added Recommends lxqt-session-l10n
+  * Fixed copyrights Format field to https
+  * Added new files and license to copyright
+  * Changed LIBUDEV_MONITOR to WITH_LIBUDEV
+  * Added translation control to rules
+  * Set CMAKE_BUILD_TYPE=RelWithDebInfo
+  * Exported LC_ALL=C.UTF-8, make builds reproducible
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 19 Jul 2016 18:31:52 +0200
+
 lxqt-session (0.10.0-4) unstable; urgency=medium
 
   * turn LIBUDEV_MONITOR on for linux, thanks RalfJ

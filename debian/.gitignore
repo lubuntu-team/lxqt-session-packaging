@@ -1,7 +1,9 @@
 /*.debhelper
 /*.log
 /*.substvars
+/debhelper-build-stamp
 /files
 
 /lxqt-session/
 /lxqt-session-dbg/
+
