@@ -1,3 +1,9 @@
+lxqt-session (0.10.96~46-g9309bb5-2) experimental; urgency=medium
+
+  * Fixed VCS fields, point to the right branch 
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 20 Jul 2016 22:51:00 +0200
+
 lxqt-session (0.10.96~46-g9309bb5-1) experimental; urgency=medium
 
   * Cherry-picking upstream version 0.10.96~46-g9309bb5.
