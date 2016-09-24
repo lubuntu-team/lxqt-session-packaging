@@ -26,6 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "lockscreenmanager.h"
+#include "log.h"
 #include <QTimer>
 #include <QDBusReply>
 #include <QDebug>
@@ -41,11 +42,8 @@ LockScreenManager::~LockScreenManager()
     delete mProvider;
 }
 
-bool LockScreenManager::startup()
+bool LockScreenManager::startup(bool lockBeforeSleep)
 {
-    connect(&mScreenSaver, &LXQt::ScreenSaver::done,
-            &mLoop, &QEventLoop::quit);
-
     mProvider = new LogindProvider;
     if (!mProvider->isValid())
     {
@@ -58,19 +56,32 @@ bool LockScreenManager::startup()
         }
     }
 
-    if (mProvider)
+    if (!mProvider)
     {
-        qDebug() << "LockScreenManager:"
-                << mProvider->metaObject()->className()
-                << "will be used";
+        qCDebug(SESSION) << "LockScreenManager: no valid provider";
+        return false;
+    }
 
+    qCDebug(SESSION) << "LockScreenManager:"
+            << mProvider->metaObject()->className()
+            << "will be used";
+
+    connect(&mScreenSaver, &LXQt::ScreenSaver::done, &mLoop, &QEventLoop::quit);
+
+    connect(mProvider, &LockScreenProvider::lockRequested, [this] {
+        mScreenSaver.lockScreen();
+        mLoop.exec();
+    });
+
+    if (lockBeforeSleep)
+    {
         connect(mProvider,
                 &LockScreenProvider::aboutToSleep,
                 [this] (bool beforeSleep)
         {
             if (beforeSleep)
             {
-                qDebug() << "LockScreenManager: system is about to sleep";
+                qCDebug(SESSION) << "LockScreenManager: system is about to sleep";
 
                 mScreenSaver.lockScreen();
                 mLoop.exec();
@@ -80,17 +91,12 @@ bool LockScreenManager::startup()
                 mProvider->inhibit();
         });
 
-        connect(mProvider, &LockScreenProvider::lockRequested, [this] {
-            mScreenSaver.lockScreen();
-            mLoop.exec();
-        });
-
-        return mProvider->inhibit();
+        if (!mProvider->inhibit())
+            qCDebug(SESSION) << "LockScreenManager:"
+                    << "could not inhibit session provider";
     }
-    else
-        qDebug() << "LockScreenManager: no valid provider";
 
-    return false;
+    return true;
 }
 
 /*
@@ -150,7 +156,7 @@ bool LogindProvider::inhibit()
 
     if (!reply.isValid())
     {
-        qDebug() << "LockScreenManager: " << reply.error();
+        qCDebug(SESSION) << "LockScreenManager: " << reply.error();
         return false;
     }
 
@@ -235,7 +241,7 @@ bool ConsoleKit2Provider::inhibit()
 
     if (!reply.isValid())
     {
-        qDebug() << "LockScreenWatcher: " << reply.error();
+        qCDebug(SESSION) << "LockScreenWatcher: " << reply.error();
         return false;
     }
 
