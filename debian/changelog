@@ -1,3 +1,16 @@
+lxqt-session (0.11.0-1) experimental; urgency=medium
+
+  * Cherry-picking upstream release 0.11.0
+  * Added build dependency libqt5svg5-dev
+  * Bumped compat to 10
+  * Bumped build dependency debhelper (>= 10)
+  * Bumped minimum version libqtxdg-dev (>= 2.0.0)
+  * Bumped minimum version libqtxdgiconloader-dev (>= 2.0.0)
+  * Bumped minimum version liblxqt-dev (>= 0.11.0)
+  * Removed --parallel from rules, standard in compat 10
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 25 Sep 2016 20:01:38 +0200
+
 lxqt-session (0.10.96~46-g9309bb5-2) experimental; urgency=medium
 
   * Fixed VCS fields, point to the right branch 
