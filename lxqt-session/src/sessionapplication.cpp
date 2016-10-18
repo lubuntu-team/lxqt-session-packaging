@@ -22,17 +22,22 @@
 #include "lxqtmodman.h"
 #include "UdevNotifier.h"
 #include "numlock.h"
+#include "lockscreenmanager.h"
 #include <unistd.h>
+#include <csignal>
 #include <LXQt/Settings>
 #include <QProcess>
-#include <QDebug>
+#include "log.h"
 
 #include <QX11Info>
 // XKB, this should be disabled in Wayland?
 #include <X11/XKBlib.h>
 
-SessionApplication::SessionApplication(int& argc, char** argv) : LXQt::Application(argc, argv)
+SessionApplication::SessionApplication(int& argc, char** argv) :
+    LXQt::Application(argc, argv),
+    lockScreenManager(new LockScreenManager(this))
 {
+    listenToUnixSignals({SIGINT, SIGTERM, SIGQUIT, SIGHUP});
     char* winmanager = NULL;
     int c;
     while ((c = getopt (argc, argv, "c:w:")) != -1)
@@ -56,6 +61,7 @@ SessionApplication::SessionApplication(int& argc, char** argv) : LXQt::Applicati
     qputenv("LXQT_SESSION_CONFIG", configName.toUtf8());
 
     modman = new LXQtModuleManager(winmanager);
+    connect(this, &LXQt::Application::unixSignal, modman, &LXQtModuleManager::logout);
     new SessionDBusAdaptor(modman);
     // connect to D-Bus and register as an object:
     QDBusConnection::sessionBus().registerService("org.lxqt.session");
@@ -73,7 +79,7 @@ SessionApplication::~SessionApplication()
 bool SessionApplication::startup()
 {
     LXQt::Settings settings(configName);
-    qDebug() << __FILE__ << ":" << __LINE__ << "Session" << configName << "about to launch (default 'session')";
+    qCDebug(SESSION) << __FILE__ << ":" << __LINE__ << "Session" << configName << "about to launch (default 'session')";
 
     loadEnvironmentSettings(settings);
     // loadFontSettings(settings);
@@ -94,10 +100,16 @@ bool SessionApplication::startup()
             });
     connect(dev_notifier, &UdevNotifier::deviceAdded, [this, dev_timer] (QString device)
             {
-                qWarning() << QStringLiteral("Session '%1', new input device '%2', keyboard setting will be (optionaly) reloaded...").arg(configName).arg(device);
+                qCWarning(SESSION) << QStringLiteral("Session '%1', new input device '%2', keyboard setting will be (optionaly) reloaded...").arg(configName).arg(device);
                 dev_timer->start();
             });
 #endif
+
+    bool lockBeforeSleep = settings.value(QLatin1String("lock_screen_before_power_actions"), true).toBool();
+    if (lockScreenManager->startup(lockBeforeSleep))
+        qCDebug(SESSION) << "LockScreenManager started successfully";
+    else
+        qCWarning(SESSION) << "LockScreenManager couldn't start";
 
     // launch module manager and autostart apps
     modman->startup(settings);
@@ -107,7 +119,7 @@ bool SessionApplication::startup()
 
 void SessionApplication::mergeXrdb(const char* content, int len)
 {
-    qDebug() << "xrdb:" << content;
+    qCDebug(SESSION) << "xrdb:" << content;
     QProcess xrdb;
     xrdb.start("xrdb -merge -");
     xrdb.write(content, len);
@@ -157,7 +169,7 @@ void SessionApplication::setxkbmap(QString layout, QString variant, QString mode
 
 void SessionApplication::loadKeyboardSettings(LXQt::Settings& settings)
 {
-  qDebug() << settings.fileName();
+  qCDebug(SESSION) << settings.fileName();
     settings.beginGroup("Keyboard");
     XKeyboardControl values;
     /* Keyboard settings */
@@ -266,15 +278,25 @@ void SessionApplication::loadFontSettings(LXQt::Settings& settings)
 #define DEFAULT_PTR_MAP_SIZE 128
 void SessionApplication::setLeftHandedMouse(bool mouse_left_handed)
 {
-    unsigned char *buttons;
+    unsigned char *buttons, *more_buttons;
     int n_buttons, i;
     int idx_1 = 0, idx_3 = 1;
 
     buttons = (unsigned char*)malloc(DEFAULT_PTR_MAP_SIZE);
+    if (!buttons)
+    {
+        return;
+    }
     n_buttons = XGetPointerMapping(QX11Info::display(), buttons, DEFAULT_PTR_MAP_SIZE);
     if (n_buttons > DEFAULT_PTR_MAP_SIZE)
     {
-        buttons = (unsigned char*)realloc(buttons, n_buttons);
+        more_buttons = (unsigned char*)realloc(buttons, n_buttons);
+        if (!more_buttons)
+        {
+            free(buttons);
+            return;
+        }
+        buttons = more_buttons;
         n_buttons = XGetPointerMapping(QX11Info::display(), buttons, n_buttons);
     }
 

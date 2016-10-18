@@ -28,12 +28,23 @@
 #include "leavedialog.h"
 
 LeaveDialog::LeaveDialog(QWidget* parent)
-    : QDialog(parent),
+    : QDialog(parent, Qt::Dialog | Qt::WindowStaysOnTopHint | Qt::CustomizeWindowHint),
     ui(new Ui::LeaveDialog),
     mPower(new LXQt::Power(this)),
+    mPowerManager(new LXQt::PowerManager(this)),
     mScreensaver(new LXQt::ScreenSaver(this))
 {
     ui->setupUi(this);
+
+    /* This is a special dialog. We want to make it hard to ignore.
+       We make it:
+           * Undraggable
+           * Frameless
+           * Stays on top of all other windows
+           * Present in all desktops
+    */
+    setWindowFlags((Qt::CustomizeWindowHint | Qt::FramelessWindowHint |
+                    Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint));
 
     ui->logoutButton->setEnabled(mPower->canAction(LXQt::Power::PowerLogout));
     ui->rebootButton->setEnabled(mPower->canAction(LXQt::Power::PowerReboot));
@@ -41,11 +52,33 @@ LeaveDialog::LeaveDialog(QWidget* parent)
     ui->suspendButton->setEnabled(mPower->canAction(LXQt::Power::PowerSuspend));
     ui->hibernateButton->setEnabled(mPower->canAction(LXQt::Power::PowerHibernate));
 
-    connect(ui->logoutButton,       &QPushButton::clicked, [&] { close(); mPower->logout(); });
-    connect(ui->rebootButton,       &QPushButton::clicked, [&] { close(); mPower->reboot(); });
-    connect(ui->shutdownButton,     &QPushButton::clicked, [&] { close(); mPower->shutdown(); });
-    connect(ui->suspendButton,      &QPushButton::clicked, [&] { close(); mPower->suspend(); });
-    connect(ui->hibernateButton,    &QPushButton::clicked, [&] { close(); mPower->hibernate(); });
+    /*
+     * Make all the buttons have equal widths
+     */
+    QVector<QToolButton*> buttons(6);
+    buttons[0] = ui->logoutButton;
+    buttons[1] = ui->lockscreenButton;
+    buttons[2] = ui->suspendButton;
+    buttons[3] = ui->hibernateButton;
+    buttons[4] = ui->rebootButton;
+    buttons[5] = ui->shutdownButton;
+
+    int maxWidth = 0;
+    const int N = buttons.size();
+    for (int i = 0; i < N; ++i) {
+        // Make sure that the button size is adjusted to the text width
+        buttons.at(i)->adjustSize();
+        maxWidth = qMax(maxWidth, buttons.at(i)->width());
+    }
+    for (int i = 0; i < N; ++i)
+        buttons.at(i)->setMinimumWidth(maxWidth);
+
+    connect(ui->logoutButton,       &QPushButton::clicked, [&] { close(); mPowerManager->logout();    });
+    connect(ui->rebootButton,       &QPushButton::clicked, [&] { close(); mPowerManager->reboot();    });
+    connect(ui->shutdownButton,     &QPushButton::clicked, [&] { close(); mPowerManager->shutdown();  });
+    connect(ui->suspendButton,      &QPushButton::clicked, [&] { close(); mPowerManager->suspend();   });
+    connect(ui->hibernateButton,    &QPushButton::clicked, [&] { close(); mPowerManager->hibernate(); });
+    connect(ui->cancelButton,       &QPushButton::clicked, [&] { close();                             });
     connect(ui->lockscreenButton,   &QPushButton::clicked, [&] {
         close();
         QEventLoop loop;
@@ -54,10 +87,17 @@ LeaveDialog::LeaveDialog(QWidget* parent)
         loop.exec();
     });
 
-    connect(ui->cancelButton, &QPushButton::clicked, [&] { close(); });
 }
 
 LeaveDialog::~LeaveDialog()
 {
     delete ui;
+}
+
+void LeaveDialog::resizeEvent(QResizeEvent* event)
+{
+    QRect screen = QApplication::desktop()->screenGeometry();
+    move((screen.width()  - this->width()) / 2,
+         (screen.height() - this->height()) / 2);
+
 }

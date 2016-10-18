@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 project(lxqt-session)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
+option(WITH_LIBUDEV "Build with libudev support" ON)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -18,6 +21,7 @@ find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 
 find_package(lxqt REQUIRED QUIET)
+find_package(XdgUserDirs REQUIRED QUIET)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)

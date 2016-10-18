@@ -1,3 +1,30 @@
+lxqt-session (0.11.0-2) unstable; urgency=medium
+
+  * Cherry-picking upstream release 0.11.0
+  * Synced debian foo with experimental
+  * Bumped Standards to 3.9.8, no changes needed
+  * Bumped compat to 10
+  * Removed --parallel from rules, standard in compat 10
+  * Bumped build dependency debhelper (>= 10)
+  * Bumped minimum version libqtxdg-dev (>= 2.0.0)
+  * Bumped minimum version liblxqt-dev (>= 0.11.0)
+  * Added build dependency libqt5svg5-dev
+  * Added build dependency libqtxdgiconloader-dev
+  * Added build dependency xdg-user-dirs
+  * Move Pre-Depends lxqt-common to Depends 
+  * Added Depends x11-xkb-utils
+  * Added Recommends lxqt-session-l10n
+  * Fixed copyrights Format field to https
+  * Fixed VCS fields, using plain /git/
+  * Fixed VCS fields, point to the right branch 
+  * Added new files and license to copyright
+  * Changed LIBUDEV_MONITOR to WITH_LIBUDEV
+  * Added translation control to rules
+  * Set CMAKE_BUILD_TYPE=RelWithDebInfo
+  * Exported LC_ALL=C.UTF-8, make builds reproducible
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 18 Oct 2016 18:14:53 +0200
+
 lxqt-session (0.10.0-4) unstable; urgency=medium
 
   * turn LIBUDEV_MONITOR on for linux, thanks RalfJ

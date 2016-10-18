@@ -1,16 +1,13 @@
+cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 project(lxqt-session)
 
 if(NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE Release)
 endif()
 
-if(LIBUDEV_MONITOR)
-    set(LIBUDEV_MONITOR Yes)
-
-    find_package(PkgConfig)
-    pkg_check_modules(LIBUDEV REQUIRED libudev)
-    include_directories(${LIBUDEV_INCLUDE_DIRS})
-
+if (WITH_LIBUDEV)
+    find_package(UDev REQUIRED)
+    include_directories(${LIBUDEV_INCLUDE_DIR})
     add_definitions(-DWITH_LIBUDEV_MONITOR)
 endif()
 
@@ -18,9 +15,6 @@ include_directories(
     ${XCB_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR}
 )
-if(LIBUDEV_MONITOR)
-    include_directories(${LIBUDEV_INCLUDE_DIRS})
-endif()
 
 set(lxqt-session_HDRS "")
 
@@ -31,10 +25,13 @@ set(lxqt-session_SRCS
     src/windowmanager.cpp
     src/sessionapplication.cpp
     src/sessiondbusadaptor.h
+    src/lockscreenmanager.cpp
+    src/lockscreenmanager.h
     src/numlock.cpp
     src/numlock.h
+    src/log.cpp
 )
-if(LIBUDEV_MONITOR)
+if (WITH_LIBUDEV)
     list(APPEND lxqt-session_SRCS src/UdevNotifier.cpp)
 endif()
 
@@ -52,6 +49,16 @@ lxqt_translate_ts(lxqt-session_QM_FILES
         ${lxqt-session_UI}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    PULL_TRANSLATIONS
+        ${PULL_TRANSLATIONS}
+    CLEAN_TRANSLATIONS
+        ${CLEAN_TRANSLATIONS}
+    TRANSLATIONS_REPO
+        ${TRANSLATIONS_REPO}
+    TRANSLATIONS_REFSPEC
+        ${TRANSLATIONS_REFSPEC}
+    REPO_SUBDIR
+        "lxqt-session/${PROJECT_NAME}"
 )
 lxqt_app_translation_loader(lxqt-session_QM_LOADER ${PROJECT_NAME})
 
@@ -71,8 +78,9 @@ target_link_libraries(lxqt-session
     lxqt
     KF5::WindowSystem
 )
-if(LIBUDEV_MONITOR)
-    target_link_libraries(lxqt-session ${LIBUDEV_LDFLAGS})
+
+if (WITH_LIBUDEV)
+    target_link_libraries(lxqt-session ${UDEV_LIBS})
 endif()
 
 INSTALL(TARGETS

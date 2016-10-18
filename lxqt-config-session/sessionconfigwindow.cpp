@@ -53,7 +53,7 @@ SessionConfigWindow::SessionConfigWindow() :
     addPage(defaultApps, tr("Default Applications"), "preferences-desktop-filetype-association");
 
     UserLocationsPage* userLocations = new UserLocationsPage(this);
-    addPage(userLocations, tr("Locations"), QStringLiteral("folder"));
+    addPage(userLocations, tr("User Directories"), QStringLiteral("folder"));
     connect(userLocations, SIGNAL(needRestart()), SLOT(setRestart()));
     connect(this, SIGNAL(reset()), userLocations, SLOT(restoreSettings()));
     connect(this, SIGNAL(save()), userLocations, SLOT(save()));
@@ -78,6 +78,8 @@ SessionConfigWindow::SessionConfigWindow() :
     environmentPage->restoreSettings();
     connect(this, SIGNAL(reset()), SLOT(clearRestart()));
     m_restart = false;
+
+    adjustSize();
 }
 
 SessionConfigWindow::~SessionConfigWindow()
@@ -101,7 +103,7 @@ void SessionConfigWindow::handleCfgComboBox(QComboBox * cb,
                                            )
 {
     QStringList realValues;
-    foreach (QString s, availableValues)
+    foreach (const QString &s, availableValues)
     {
         if (findProgram(s))
             realValues << s;

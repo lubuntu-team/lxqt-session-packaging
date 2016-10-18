@@ -39,6 +39,7 @@ public:
 
     UserLocationsPagePrivate();
     static const QStringList locationsName;
+    static const QStringList locationsToolTips;
 
     QList<QString> initialLocations;
     QList<QLineEdit *> locations;
@@ -64,6 +65,16 @@ const QStringList UserLocationsPagePrivate::locationsName = QStringList() <<
     qApp->translate("UserLocationsPrivate", "Music") <<
     qApp->translate("UserLocationsPrivate", "Pictures") <<
     qApp->translate("UserLocationsPrivate", "Videos");
+
+const QStringList UserLocationsPagePrivate::locationsToolTips = QStringList() <<
+    qApp->translate("UserLocationsPrivate", "Contains all the files which you see on your desktop") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to save your downloaded files") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to load or save templates from or to") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to publicly share your files") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to load or save documents from or to") <<
+    qApp->translate("UserLocationsPrivate", "Default foldet to load or save music from or to") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to load or save pictures from or to") <<
+    qApp->translate("UserLocationsPrivate", "Default folder to load or save videos from or to");
 
 void UserLocationsPagePrivate::getUserDirs()
 {
@@ -109,6 +120,7 @@ UserLocationsPage::UserLocationsPage(QWidget *parent)
         QLineEdit *edit = new QLineEdit(this);
         d->locations.append(edit);
         edit->setClearButtonEnabled(true);
+        edit->setToolTip(d->locationsToolTips.at(i));
 
         QToolButton *button = new QToolButton(this);
         button->setIcon(XdgIcon::fromTheme(QStringLiteral("folder")));
@@ -149,15 +161,22 @@ void UserLocationsPage::save()
 
     const int N = d->locations.count();
     for (int i = 0; i < N; ++i) {
-        const QDir dir(d->locations.at(i)->text());
-        const QString s = dir.canonicalPath();
+        QString s;
+        const QString text = d->locations.at(i)->text();
+
+        if (text.isEmpty()) {
+            s = XdgDirs::userDirDefault(static_cast<XdgDirs::UserDirectory> (i));
+        } else {
+            const QDir dir(text);
+            s = dir.canonicalPath();
+        }
 
         if (s != d->initialLocations.at(i)) {
             const bool ok = XdgDirs::setUserDir(
                         static_cast<XdgDirs::UserDirectory> (i), s, true);
             if (!ok) {
                 const int ret = QMessageBox::warning(this,
-                    tr("LXQt Session Settings - Locations"),
+                    tr("LXQt Session Settings - User Directories"),
                     tr("An error ocurred while applying the settings for the %1 location").arg(d->locationsName.at(i)),
                     QMessageBox::Ok);
                 Q_UNUSED(ret);
