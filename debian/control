@@ -24,7 +24,8 @@ Depends: ${misc:Depends},
          ${shlibs:Depends},
          lxqt-common,
          x11-xkb-utils
-Recommends: lxqt-session-l10n
+Recommends: lxqt-session-l10n,
+            xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
 Provides: x-session-manager
 Description: session manager component for LXQt
  LXQt is an advanced, easy-to-use, and fast desktop environment based on

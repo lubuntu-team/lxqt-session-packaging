@@ -1,3 +1,11 @@
+lxqt-session (0.11.1-2) unstable; urgency=medium
+
+  * Recommend a screen-saver:
+    xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
+    (Closes: #824857)
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 02 Jan 2017 18:52:28 +0100
+
 lxqt-session (0.11.1-1) unstable; urgency=medium
 
   * Cherry-picking upstream release 0.11.1.
