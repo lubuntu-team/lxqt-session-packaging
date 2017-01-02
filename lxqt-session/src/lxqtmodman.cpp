@@ -280,7 +280,10 @@ void LXQtModuleManager::startConfUpdate()
 void LXQtModuleManager::restartModules(int exitCode, QProcess::ExitStatus exitStatus)
 {
     LXQtModule* proc = qobject_cast<LXQtModule*>(sender());
-    Q_ASSERT(proc);
+    if (nullptr == proc) {
+        qCWarning(SESSION) << "Got an invalid (null) module to restart. Ignoring it";
+        return;
+    }
 
     if (!proc->isTerminating())
     {
@@ -319,7 +322,25 @@ void LXQtModuleManager::restartModules(int exitCode, QProcess::ExitStatus exitSt
 LXQtModuleManager::~LXQtModuleManager()
 {
     qApp->removeNativeEventFilter(this);
-    qDeleteAll(mNameMap);
+
+    // We disconnect the finished signal before deleting the process. We do
+    // this to prevent a crash that results from a state change signal being
+    // emmited while deleting a crashing module.
+    // If the module is still connect restartModules will be called with a
+    // invalid sender.
+
+    ModulesMapIterator i(mNameMap);
+    while (i.hasNext())
+    {
+        i.next();
+
+        auto p = i.value();
+        disconnect(p, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
+
+        delete p;
+        mNameMap[i.key()] = nullptr;
+    }
+
     delete mWmProcess;
 }
 
