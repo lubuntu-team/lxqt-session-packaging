@@ -1,3 +1,19 @@
+lxqt-session (0.11.1-1) unstable; urgency=medium
+
+  * Cherry-picking upstream release 0.11.1.
+  * Removed some build dependencies:
+    -cmake
+    -libqt5xdg-dev
+    -libqt5xdgiconloader-dev
+    -pkg-config
+    -qttools5-dev
+    -qttools5-dev-tools
+  * Bumped build dependency liblxqt0-dev (>= 0.11.1)
+  * Bumped years in d/copyright
+  * Removed deleted files and BSD-License from d/copyright
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 02 Jan 2017 16:41:12 +0100
+
 lxqt-session (0.11.0-2) unstable; urgency=medium
 
   * Cherry-picking upstream release 0.11.0
