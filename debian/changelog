@@ -1,3 +1,17 @@
+lxqt-session (0.11.1-3) unstable; urgency=medium
+
+  * Bumped Standards to 4.0.0 - no changes needed
+  * Added to Recommends: lxqt-qtplugin and lxqt-policykit
+    (Closes: #866344) 
+  * Added to Recommends: lxqt-config (Closes: #866346)
+  * Added to Recommends: lxqt-powermanagement (Closes: #866651)
+  * Added to Recommends: lxqt-sudo | gksu (Closes: #866650)
+    One graphical sudo should be enough on a system - we leave out
+    the ancient kdesudo for a reason.
+  * Added to Recommends: qps and qlipper (Closes: #866648)
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 30 Jun 2017 19:00:49 +0200
+
 lxqt-session (0.11.1-2) unstable; urgency=medium
 
   * Recommend a screen-saver:
