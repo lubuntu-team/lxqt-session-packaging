@@ -30,6 +30,7 @@ Recommends: lxqt-session-l10n,
             lxqt-powermanagement,
             lxqt-qtplugin,
             lxqt-sudo | gksu,
+            pcmanfm-qt,
             qlipper,
             qps,
             xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
