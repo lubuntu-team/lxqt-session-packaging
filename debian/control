@@ -26,13 +26,14 @@ Depends: ${misc:Depends},
          x11-xkb-utils
 Recommends: lxqt-session-l10n,
             lxqt-config,
+            lxqt-notificationd,
             lxqt-policykit,
             lxqt-powermanagement,
             lxqt-qtplugin,
-            lxqt-sudo | gksu,
+            lxqt-sudo,
             pcmanfm-qt,
             qlipper,
-            qps,
+            qps [linux-any],
             xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
 Provides: x-session-manager
 Description: session manager component for LXQt

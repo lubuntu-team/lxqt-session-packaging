@@ -1,3 +1,12 @@
+lxqt-session (0.11.1-5) unstable; urgency=medium
+
+  * Fixed qps dependency to [linux-any] (Closes: #842649)
+  * Recommends lxqt-notificationd (Closes: #866887)
+  * Indirectly depend on desktop-file-utils via liblxqt (Closes: #866899)
+  * Remove alternative gksu, see #867236 "Unsuitable for release in buster"
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 05 Jul 2017 02:25:34 +0200
+
 lxqt-session (0.11.1-4) unstable; urgency=medium
 
   * Added pcmanfm-qt to Recommends - the session should recommend at least one
