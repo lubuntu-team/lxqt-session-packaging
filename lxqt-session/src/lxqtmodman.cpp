@@ -57,9 +57,8 @@ using namespace LXQt;
 /**
  * @brief the constructor, needs a valid modules.conf
  */
-LXQtModuleManager::LXQtModuleManager(const QString & windowManager, QObject* parent)
+LXQtModuleManager::LXQtModuleManager(QObject* parent)
     : QObject(parent),
-      mWindowManager(windowManager),
       mWmProcess(new QProcess(this)),
       mThemeWatcher(new QFileSystemWatcher(this)),
       mWmStarted(false),
@@ -70,6 +69,11 @@ LXQtModuleManager::LXQtModuleManager(const QString & windowManager, QObject* par
     connect(LXQt::Settings::globalSettings(), SIGNAL(lxqtThemeChanged()), SLOT(themeChanged()));
 
     qApp->installNativeEventFilter(this);
+}
+
+void LXQtModuleManager::setWindowManager(const QString & windowManager)
+{
+    mWindowManager = windowManager;
 }
 
 void LXQtModuleManager::startup(LXQt::Settings& s)
@@ -277,7 +281,7 @@ void LXQtModuleManager::startConfUpdate()
     startProcess(desktop);
 }
 
-void LXQtModuleManager::restartModules(int exitCode, QProcess::ExitStatus exitStatus)
+void LXQtModuleManager::restartModules(int /*exitCode*/, QProcess::ExitStatus exitStatus)
 {
     LXQtModule* proc = qobject_cast<LXQtModule*>(sender());
     if (nullptr == proc) {
@@ -347,7 +351,7 @@ LXQtModuleManager::~LXQtModuleManager()
 /**
 * @brief this logs us out by terminating our session
 **/
-void LXQtModuleManager::logout()
+void LXQtModuleManager::logout(bool doExit)
 {
     // modules
     ModulesMapIterator i(mNameMap);
@@ -377,7 +381,8 @@ void LXQtModuleManager::logout()
         mWmProcess->kill();
     }
 
-    QCoreApplication::exit(0);
+    if (doExit)
+        QCoreApplication::exit(0);
 }
 
 QString LXQtModuleManager::showWmSelectDialog()
@@ -396,7 +401,7 @@ void LXQtModuleManager::resetCrashReport()
     mCrashReport.clear();
 }
 
-bool LXQtModuleManager::nativeEventFilter(const QByteArray & eventType, void * message, long * result)
+bool LXQtModuleManager::nativeEventFilter(const QByteArray & eventType, void * /*message*/, long * /*result*/)
 {
     if (eventType != "xcb_generic_event_t") // We only want to handle XCB events
         return false;

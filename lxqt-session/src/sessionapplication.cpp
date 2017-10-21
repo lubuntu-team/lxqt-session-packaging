@@ -38,30 +38,9 @@ SessionApplication::SessionApplication(int& argc, char** argv) :
     lockScreenManager(new LockScreenManager(this))
 {
     listenToUnixSignals({SIGINT, SIGTERM, SIGQUIT, SIGHUP});
-    char* winmanager = NULL;
-    int c;
-    while ((c = getopt (argc, argv, "c:w:")) != -1)
-    {
-        if (c == 'c')
-        {
-            configName = optarg;
-            break;
-        }
-        else if (c == 'w')
-        {
-            winmanager = optarg;
-            break;
-        }
-    }
 
-    if(configName.isEmpty())
-      configName = "session";
-
-    // tell the world which config file we're using.
-    qputenv("LXQT_SESSION_CONFIG", configName.toUtf8());
-
-    modman = new LXQtModuleManager(winmanager);
-    connect(this, &LXQt::Application::unixSignal, modman, &LXQtModuleManager::logout);
+    modman = new LXQtModuleManager;
+    connect(this, &LXQt::Application::unixSignal, modman, [this] { modman->logout(true); });
     new SessionDBusAdaptor(modman);
     // connect to D-Bus and register as an object:
     QDBusConnection::sessionBus().registerService("org.lxqt.session");
@@ -74,6 +53,20 @@ SessionApplication::SessionApplication(int& argc, char** argv) :
 SessionApplication::~SessionApplication()
 {
     delete modman;
+}
+
+void SessionApplication::setWindowManager(const QString& windowManager)
+{
+    modman->setWindowManager(windowManager);
+}
+
+void SessionApplication::setConfigName(const QString& configName)
+{
+    if(configName.isEmpty())
+      this->configName = "session";
+
+    // tell the world which config file we're using.
+    qputenv("LXQT_SESSION_CONFIG", this->configName.toLocal8Bit());
 }
 
 bool SessionApplication::startup()
@@ -135,7 +128,7 @@ void SessionApplication::loadEnvironmentSettings(LXQt::Settings& settings)
     Q_FOREACH (QString i, settings.childKeys())
     {
         envVal = settings.value(i).toByteArray();
-        lxqt_setenv(i.toUtf8().constData(), envVal);
+        lxqt_setenv(i.toLocal8Bit().constData(), envVal);
     }
     settings.endGroup();
 }
