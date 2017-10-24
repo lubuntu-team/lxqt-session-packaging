@@ -29,12 +29,24 @@
 
 #include <XdgIcon>
 #include <LXQt/Settings>
+#include <QCommandLineParser>
 
 #include "sessionconfigwindow.h"
 
 int main(int argc, char** argv)
 {
     LXQt::SingleApplication a(argc, argv);
+    a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config Session"));
+    const QString VERINFO = QStringLiteral(LXQT_SESSION_VERSION
+                                           "\nliblxqt   " LXQT_VERSION
+                                           "\nQt        " QT_VERSION_STR);
+    a.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(a);
 
     SessionConfigWindow w;
     a.setActivationWindow(&w);
