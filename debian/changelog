@@ -1,3 +1,9 @@
+lxqt-session (0.12.0-2) experimental; urgency=medium
+
+  * Added upstream pull requests for improved xdg handling (Closes: #883032).
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 01 Dec 2017 21:50:55 +0100
+
 lxqt-session (0.12.0-1) experimental; urgency=medium
 
   * Cherry-picking upstream release 0.12.0.

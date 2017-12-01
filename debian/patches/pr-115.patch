@@ -1,0 +1,23 @@
+From ca88cb247bd3856792daefcaf5a04bd0231c036b Mon Sep 17 00:00:00 2001
+From: Alf Gaida <agaida@siduction.org>
+Date: Wed, 29 Nov 2017 00:24:41 +0100
+Subject: [PATCH] install session configs in /usr/share/lxqt
+
+---
+ config/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config/CMakeLists.txt b/config/CMakeLists.txt
+index caabdf2..4b12525 100644
+--- a/config/CMakeLists.txt
++++ b/config/CMakeLists.txt
+@@ -3,7 +3,7 @@ install(FILES
+     lxqt.conf
+     session.conf
+     windowmanagers.conf
+-    DESTINATION "${LXQT_ETC_XDG_DIR}/lxqt"
++    DESTINATION "${CMAKE_INSTALL_DATADIR}/lxqt"
+     COMPONENT Runtime
+ )
+ install(DIRECTORY openbox
+
