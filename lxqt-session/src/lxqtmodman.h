@@ -72,8 +72,11 @@ class LXQtModuleManager : public QObject, public QAbstractNativeEventFilter
 
 public:
     //! \brief Construct LXQtModuleManager
-    LXQtModuleManager(const QString& windowManager, QObject* parent = 0);
+    LXQtModuleManager(QObject* parent = 0);
     virtual ~LXQtModuleManager();
+
+    //! \brief Set the window manager (e.g. "/usr/bin/openbox")
+    void setWindowManager(const QString & windowManager);
 
     //! \brief Start a module given its file name (e.g. "lxqt-panel.desktop")
     void startProcess(const QString& name);
@@ -96,7 +99,7 @@ public slots:
     gracefully (to kill it if it is not possible). Then the session
     exits - it returns to the kdm/gdm in most cases.
     */
-    void logout();
+    void logout(bool doExit);
 
 signals:
     void moduleStateChanged(QString moduleName, bool state);

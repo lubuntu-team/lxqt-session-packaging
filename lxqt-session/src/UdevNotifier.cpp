@@ -52,7 +52,7 @@ UdevNotifier::UdevNotifier(QString const & subsystem, QObject * parent/* = nullp
         return;
     }
 
-    int ret = udev_monitor_filter_add_match_subsystem_devtype(d->monitor, subsystem.toUtf8().constData(), nullptr);
+    int ret = udev_monitor_filter_add_match_subsystem_devtype(d->monitor, subsystem.toLatin1().constData(), nullptr);
     if (0 != ret)
         qCWarning(SESSION) << QStringLiteral("UdevNotifier: unable to add match subsystem, monitor will receive all devices");
 
@@ -75,7 +75,7 @@ UdevNotifier::~UdevNotifier()
     udev_unref(d->udev);
 }
 
-void UdevNotifier::eventReady(int socket)
+void UdevNotifier::eventReady(int /*socket*/)
 {
     struct udev_device * dev;
     while (nullptr != (dev = udev_monitor_receive_device(d->monitor)))
