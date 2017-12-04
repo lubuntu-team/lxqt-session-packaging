@@ -1,3 +1,27 @@
+lxqt-session (0.12.0-3) experimental; urgency=medium
+
+  * Added upstream pull request for moving upstream configurations
+    to /usr/share/lxqt (Closes: #883033)
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 01 Dec 2017 21:54:55 +0100
+
+lxqt-session (0.12.0-2) experimental; urgency=medium
+
+  * Added upstream pull request for improved xdg handling (Closes: #883032).
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 01 Dec 2017 21:53:35 +0100
+
+lxqt-session (0.12.0-1) experimental; urgency=medium
+
+  * Cherry-picking upstream release 0.12.0.
+  * Switched to experimental
+  * Bumped Standards to 4.1.1 - no changes needed
+  * Bumped liblxqt dependency to >= 0.12.0
+  * Breaks and Replaces lxqt-common << 0.12.0
+  * Added dependency to lxqt-themes | lxqt-theme instead
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 24 Oct 2017 21:17:51 +0200
+
 lxqt-session (0.11.1-6) unstable; urgency=medium
 
   * Moved lxqt-qtplugin to dependencies (Closes: #870138)

@@ -7,22 +7,22 @@ Section: x11
 Priority: optional
 Build-Depends: debhelper (>= 10),
                libkf5windowsystem-dev,
-               liblxqt0-dev (>= 0.11.1),
+               liblxqt0-dev (>= 0.12.0),
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libudev-dev [linux-any],
                libx11-dev,
                xdg-user-dirs
-Standards-Version: 4.0.0
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-lxqt/lxqt-session.git/?h=debian/sid
-Vcs-Git: https://anonscm.debian.org/git/pkg-lxqt/lxqt-session.git -b debian/sid
+Standards-Version: 4.1.1
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-lxqt/lxqt-session.git/?h=debian/experimental
+Vcs-Git: https://anonscm.debian.org/git/pkg-lxqt/lxqt-session.git -b debian/experimental
 Homepage: https://github.com/lxde/lxqt-session
 
 Package: lxqt-session
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         lxqt-common,
+         lxqt-themes | lxqt-theme,
          lxqt-qtplugin,
          x11-xkb-utils
 Recommends: lxqt-session-l10n,
@@ -36,6 +36,8 @@ Recommends: lxqt-session-l10n,
             qps [linux-any],
             xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
 Provides: x-session-manager
+Breaks: lxqt-common (<< 0.12.0)
+Replaces: lxqt-common (<< 0.12.0)
 Description: session manager component for LXQt
  LXQt is an advanced, easy-to-use, and fast desktop environment based on
  Qt technologies.  It has been tailored for users who value simplicity,
