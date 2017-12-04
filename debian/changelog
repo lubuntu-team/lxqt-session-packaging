@@ -1,3 +1,9 @@
+lxqt-session (0.12.0-4) unstable; urgency=medium
+
+  * Transition to unstable 
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 05 Dec 2017 00:29:14 +0100
+
 lxqt-session (0.12.0-3) experimental; urgency=medium
 
   * Added upstream pull request for moving upstream configurations
