@@ -1,3 +1,10 @@
+lxqt-session (0.12.0-5) unstable; urgency=medium
+
+  * Bumped Standards to 4.1.2, no changes needed
+  * Removed branch from VCS fields
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 14 Dec 2017 22:58:32 +0100
+
 lxqt-session (0.12.0-4) unstable; urgency=medium
 
   * Transition to unstable 
