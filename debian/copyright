@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: lxqt-session
-Source: https://github.com/lxde/lxqt-session
+Source: https://github.com/lxqt/lxqt-session
 
 Files: *
-Copyright: 2010-2012 Razor team
-           2012-2017 LXQt team
+Copyright: 2012-2018 LXQt team
+           2010-2012 Razor team
 License: LGPL-2.1+
 
 Files: lxqt-config-session/autostartedit.*
@@ -47,7 +47,7 @@ Copyright: 2016 Palo Kisa <palo.kisa@gmail.com>
 License: LGPL-2.1+
 
 Files: debian/*
-Copyright: 2014-2017 Alf Gaida <agaida@siduction.org>
+Copyright: 2014-2018 Alf Gaida <agaida@siduction.org>
            2015      Andrew Lee (李健秋) <ajqlee@debian.org>
            2015      ChangZhuo Chen (陳昌倬) <czchen@debian.org>
 License: LGPL-2.1+

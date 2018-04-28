@@ -1,3 +1,15 @@
+lxqt-session (0.12.0-6) unstable; urgency=medium
+
+  * Bumped compat to 11
+  * Bumped debhelper to >= 11~
+  * Bumped Standards to 4.1.4, no changes needed
+  * Changed VCS fields for salsa
+  * Changed Homepage, Source and watch to lxqt
+  * Bumped years in copyright
+  * Removed trailing whitespaces in changelog
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Apr 2018 16:29:59 +0200
+
 lxqt-session (0.12.0-5) unstable; urgency=medium
 
   * Bumped Standards to 4.1.2, no changes needed
@@ -7,7 +19,7 @@ lxqt-session (0.12.0-5) unstable; urgency=medium
 
 lxqt-session (0.12.0-4) unstable; urgency=medium
 
-  * Transition to unstable 
+  * Transition to unstable
 
  -- Alf Gaida <agaida@siduction.org>  Tue, 05 Dec 2017 00:29:14 +0100
 
@@ -61,7 +73,7 @@ lxqt-session (0.11.1-3) unstable; urgency=medium
 
   * Bumped Standards to 4.0.0 - no changes needed
   * Added to Recommends: lxqt-qtplugin and lxqt-policykit
-    (Closes: #866344) 
+    (Closes: #866344)
   * Added to Recommends: lxqt-config (Closes: #866346)
   * Added to Recommends: lxqt-powermanagement (Closes: #866651)
   * Added to Recommends: lxqt-sudo | gksu (Closes: #866650)
@@ -108,12 +120,12 @@ lxqt-session (0.11.0-2) unstable; urgency=medium
   * Added build dependency libqt5svg5-dev
   * Added build dependency libqtxdgiconloader-dev
   * Added build dependency xdg-user-dirs
-  * Move Pre-Depends lxqt-common to Depends 
+  * Move Pre-Depends lxqt-common to Depends
   * Added Depends x11-xkb-utils
   * Added Recommends lxqt-session-l10n
   * Fixed copyrights Format field to https
   * Fixed VCS fields, using plain /git/
-  * Fixed VCS fields, point to the right branch 
+  * Fixed VCS fields, point to the right branch
   * Added new files and license to copyright
   * Changed LIBUDEV_MONITOR to WITH_LIBUDEV
   * Added translation control to rules
@@ -127,8 +139,8 @@ lxqt-session (0.10.0-4) unstable; urgency=medium
   * turn LIBUDEV_MONITOR on for linux, thanks RalfJ
   * Fix years in copyright
   * Bump Standards to 3.9.7
-  * Use secure VCS-Fields 
-  * Added hardening=+all 
+  * Use secure VCS-Fields
+  * Added hardening=+all
 
  -- Alf Gaida <agaida@siduction.org>  Wed, 23 Mar 2016 18:46:14 +0100
 
@@ -148,9 +160,9 @@ lxqt-session (0.10.0-2) unstable; urgency=medium
 
 lxqt-session (0.9.0+20150807-2) unstable; urgency=medium
 
-  * rename lxqt-session.manpages to manpages 
+  * rename lxqt-session.manpages to manpages
   * allow build on non-linux platforms (Thanks Pino Toscano)
-    (Closes: #803656) 
+    (Closes: #803656)
   * Added lintian-overrides for invalid category
   * Fix some wording of debian/copyright
   * Fixed some copyright dates
