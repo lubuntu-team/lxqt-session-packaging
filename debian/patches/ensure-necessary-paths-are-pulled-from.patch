@@ -1,0 +1,25 @@
+Description: startlxqt: Ensure all paths are added to $XDG_CONFIG_DIRS
+ If we expect to pull settings from /usr/share and /etc, let's make sure that
+ these are in $XDG_CONFIG_DIRS before we try to pull from them.
+ .
+ Upstream wouldn't accept this; see the pull request for details.
+Author: Simon Quigley <tsimonq2@ubuntu.com>
+Bug: https://github.com/lxqt/lxqt-session/pull/126
+Last-Update: 2018-05-30
+--- a/startlxqt.in
++++ b/startlxqt.in
+@@ -26,9 +26,11 @@ export XDG_DATA_DIRS
+ if [ -z "$XDG_CONFIG_DIRS" ]; then
+     export XDG_CONFIG_DIRS="@PREDEF_XDG_CONFIG_DIRS@"
+ else
+-    if ! contains "$XDG_CONFIG_DIRS" '@LXQT_ETC_XDG_DIR@'; then
+-        XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:@LXQT_ETC_XDG_DIR@"
+-    fi
++    for directory in "/etc" "@LXQT_ETC_XDG_DIR@" "/usr/share"; do
++        if ! contains "$XDG_CONFIG_DIRS" "$directory"; then
++            XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$directory"
++        fi
++    done
+ fi
+ 
+ if [ -z "$XDG_CACHE_HOME" ]; then
