@@ -1,8 +1,8 @@
-lxqt-session (0.13.0-0ubuntu2) UNRELEASED; urgency=medium
+lxqt-session (0.13.0-0ubuntu2) cosmic; urgency=medium
 
   * Ensure all proper paths are added to $XDG_CONFIG_DIRS.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 30 May 2018 17:34:55 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 30 May 2018 17:35:31 -0500
 
 lxqt-session (0.13.0-0ubuntu1) cosmic; urgency=medium
 
