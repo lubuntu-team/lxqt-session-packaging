@@ -1,9 +1,9 @@
-lxqt-session (0.14.1-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-session (0.14.1-0ubuntu1) disco; urgency=medium
 
   * New upstream release.
   * Run wrap-and-sort.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Mar 2019 13:17:33 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Mar 2019 13:17:55 -0600
 
 lxqt-session (0.14.0-0ubuntu1) disco; urgency=medium
 
