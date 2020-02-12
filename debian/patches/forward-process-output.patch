@@ -1,0 +1,20 @@
+Author: Luís Pereira <luis.artur.pereira@gmail.com>
+Date:   Thu May 9 21:14:08 2019 +0100
+
+    Don't throw stderr/stdout to a black hole
+    Implement the consensus solution achieved described in https://github.com/lxqt/lxqt-session/pull/256.
+    It was, actually, one the alternative proposed by https://github.com/keturn.
+
+diff --git a/lxqt-session/src/lxqtmodman.cpp b/lxqt-session/src/lxqtmodman.cpp
+index 2beff61..d11ffc0 100644
+--- a/lxqt-session/src/lxqtmodman.cpp
++++ b/lxqt-session/src/lxqtmodman.cpp
+@@ -467,6 +467,7 @@ LXQtModule::LXQtModule(const XdgDesktopFile& file, QObject* parent) :
+     fileName(QFileInfo(file.fileName()).fileName()),
+     mIsTerminating(false)
+ {
++    QProcess::setProcessChannelMode(QProcess::ForwardedChannels);
+     connect(this, SIGNAL(stateChanged(QProcess::ProcessState)), SLOT(updateState(QProcess::ProcessState)));
+ }
+ 
+

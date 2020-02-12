@@ -1,9 +1,48 @@
+lxqt-session (0.14.1-2ubuntu1) focal; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - Using debhelper-compat.
+    - Keeping ubuntu-side tweaks to build deps.
+    - Added an upstream patch.
+    - Added upstream metadata.
+
+ -- Raman Sarda <theloudspeaker@lubuntu.me>  Wed, 12 Feb 2020 16:51:54 +0530
+
+lxqt-session (0.14.1-2) unstable; urgency=medium
+
+  * Fixes memory leak in lxqt-session, lxqt-session allocates memory for process
+    output never read (Closes: #928804)
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 11 May 2019 15:30:08 +0200
+
+lxqt-session (0.14.1-1) unstable; urgency=medium
+
+  * Cherry-picking new upstream version 0.14.1.
+  * Bumped minimum version liblxqt0-dev (>= 0.14.1~)
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 26 Feb 2019 02:58:20 +0100
+
 lxqt-session (0.14.1-0ubuntu1) disco; urgency=medium
 
   * New upstream release.
   * Run wrap-and-sort.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Mar 2019 13:17:55 -0600
+
+lxqt-session (0.14.0-1) unstable; urgency=medium
+
+  * Cherry-picking new upstream version 0.14.0.
+  * Bumped Standards to 4.3.0, no changes needed
+  * Dropped d/compat, use debhelper-compat = 12, no changes needed
+  * Fixed years in d/copyright
+  * Bumped minimum version liblxqt0-dev (>= 0.14.0~)
+  * Removed obsolete PULL_TRANSLATIONS= OFF from dh_auto_configure
+  * Added l10n-package, moved from lxqt-l10n
+  * Removed 01-lxqt-session-x-window-manager.patch - we automagically search
+    for a WM in the fixed WM list
+  * Added d/upstream/metadata
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 27 Jan 2019 19:26:06 +0100
 
 lxqt-session (0.14.0-0ubuntu1) disco; urgency=medium
 
@@ -14,6 +53,26 @@ lxqt-session (0.14.0-0ubuntu1) disco; urgency=medium
   * Add new lxqt-session-l10n package.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 26 Jan 2019 00:49:14 -0600
+
+lxqt-session (0.13.0-3) unstable; urgency=medium
+
+  * Fixed typo in patch description
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 07 Jul 2018 19:32:29 +0200
+
+lxqt-session (0.13.0-2) unstable; urgency=medium
+
+  * Use x-window-manager as default WM (Closes: #900430)
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 16 Jun 2018 11:00:23 +0200
+
+lxqt-session (0.13.0-1) unstable; urgency=medium
+
+  * Cherry-picking new upstream version 0.13.0.
+  * Bumped build dependency liblxqt0-dev to >= 0.13.0~
+  * Removed patches - applied upstream
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 24 May 2018 23:56:43 +0200
 
 lxqt-session (0.13.0-0ubuntu2) cosmic; urgency=medium
 
@@ -206,3 +265,4 @@ lxqt-session (0.9.0+20150807-1) unstable; urgency=low
   * Initial release (Closes: #747608)
 
  -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 12 Sep 2015 00:05:13 +0800
+
