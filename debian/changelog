@@ -1,3 +1,9 @@
+lxqt-session (0.14.1-2ubuntu2) focal; urgency=medium
+
+  * Updated rules to match debian unstable.
+
+ -- Raman Sarda <theloudspeaker@lubuntu.me>  Sun, 16 Feb 2020 00:21:11 +0530
+
 lxqt-session (0.14.1-2ubuntu1) focal; urgency=low
 
   * Merge from Debian unstable.  Remaining changes:
