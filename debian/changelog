@@ -2,6 +2,7 @@ lxqt-session (0.15.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
     - Remove reverse-applicable forward-process-output.patch.
+    - Update upstream signing key.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 24 Apr 2020 00:27:35 -0500
 
