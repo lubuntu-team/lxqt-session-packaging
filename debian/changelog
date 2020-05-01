@@ -1,6 +1,7 @@
-lxqt-session (0.14.1-2ubuntu3) UNRELEASED; urgency=medium
+lxqt-session (0.15.0-0ubuntu1) UNRELEASED; urgency=medium
 
-  * Remove reverse-applicable forward-process-output.patch.
+  * New upstream release.
+    - Remove reverse-applicable forward-process-output.patch.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 24 Apr 2020 00:27:35 -0500
 
