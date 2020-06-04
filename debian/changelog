@@ -1,4 +1,4 @@
-lxqt-session (0.15.0-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-session (0.15.0-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
     - Remove reverse-applicable forward-process-output.patch.
@@ -6,7 +6,7 @@ lxqt-session (0.15.0-0ubuntu1) UNRELEASED; urgency=medium
     - Update LXQt build dependencies.
   * Update Standards-version to 4.5.0, no changes needed.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 24 Apr 2020 00:27:35 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 04 Jun 2020 14:14:17 -0500
 
 lxqt-session (0.14.1-2ubuntu2) focal; urgency=medium
 
