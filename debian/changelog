@@ -1,3 +1,21 @@
+lxqt-session (0.16.0-1ubuntu1) hirsute; urgency=medium
+
+  * New upstream version.
+  * Bump debhelper-compat requirement to 12
+
+ -- Raman Sarda <theloudspeaker@disroot.org>  Mon, 22 Feb 2021 01:23:18 +0530
+
+lxqt-session (0.16.0-1) unstable; urgency=medium
+
+  [ Alf Gaida ]
+  * Switched to gbp
+  * Bumped Standards-Version to 4.4.0, no changes needed
+
+  [ Andrew Lee (李健秋) ]
+  * New upstream release.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 06 Jan 2021 18:11:54 +0800
+
 lxqt-session (0.15.0-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
