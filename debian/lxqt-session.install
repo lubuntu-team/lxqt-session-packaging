@@ -1,5 +1,4 @@
 etc/xdg/autostart/lxqt-xscreensaver-autostart.desktop
-etc/xdg/openbox/lxqt-rc.xml
 usr/bin/lxqt-config-session
 usr/bin/lxqt-leave
 usr/bin/lxqt-session
