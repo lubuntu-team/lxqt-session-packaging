@@ -8,7 +8,7 @@ Section: x11
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
                libkf5windowsystem-dev,
-               liblxqt0-dev (>= 0.17.0),
+               liblxqt1-dev (>= 1.1.0),
                libprocps-dev,
                libqt5svg5-dev,
                libqt5x11extras5-dev,
