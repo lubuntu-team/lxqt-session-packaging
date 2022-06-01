@@ -4,6 +4,7 @@ lxqt-session (1.1.1-0ubuntu1) UNRELEASED; urgency=medium
     - Add qtxdg-tools as a build dependency.
   * Bump build dependencies.
   * Remove old Breaks/Replaces since we're past the LTS.
+  * Remove the old KDM config file, it is no longer shipped upstream.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 01 Jun 2022 16:30:00 -0500
 
