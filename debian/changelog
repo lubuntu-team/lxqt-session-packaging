@@ -1,4 +1,4 @@
-lxqt-session (1.1.1-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-session (1.1.1-0ubuntu1) kinetic; urgency=medium
 
   * New upstream release.
     - Add qtxdg-tools as a build dependency.
@@ -6,7 +6,7 @@ lxqt-session (1.1.1-0ubuntu1) UNRELEASED; urgency=medium
   * Remove old Breaks/Replaces since we're past the LTS.
   * Remove the old KDM config file, it is no longer shipped upstream.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 01 Jun 2022 16:30:00 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 01 Jun 2022 16:44:07 -0500
 
 lxqt-session (0.17.1-0ubuntu1) impish; urgency=medium
 
