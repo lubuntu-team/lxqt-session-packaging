@@ -14,6 +14,7 @@ Build-Depends: debhelper-compat (= 13),
                libqt5x11extras5-dev,
                libudev-dev [linux-any],
                libx11-dev,
+               qtxdg-tools,
                xdg-user-dirs
 Standards-Version: 4.5.1
 Vcs-Browser: https://phab.lubuntu.me/source/lxqt-session/
@@ -40,8 +41,6 @@ Recommends: lxqt-config,
             qps [linux-any],
             xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
 Provides: x-session-manager
-Breaks: lxqt-common (<< 0.12.0)
-Replaces: lxqt-common (<< 0.12.0)
 Description: session manager component for LXQt
  LXQt is an advanced, easy-to-use, and fast desktop environment based on
  Qt technologies.  It has been tailored for users who value simplicity,
@@ -55,8 +54,6 @@ Architecture: all
 Multi-Arch: foreign
 Section: localization
 Depends: qttranslations5-l10n, ${misc:Depends}
-Breaks: lxqt-session (<< 0.11.0)
-Replaces: lxqt-session (<< 0.11.0)
 Description: Language package for lxqt-session
  The l10n files for lxqt-session.
  .
