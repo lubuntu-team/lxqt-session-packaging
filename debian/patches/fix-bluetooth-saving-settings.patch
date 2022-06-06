@@ -1,0 +1,27 @@
+From 9d63aba3cdb88dafb837fe3e94ada3047de7ec0c Mon Sep 17 00:00:00 2001
+From: Chih-Hsuan Yen <yan12125@gmail.com>
+Date: Sun, 29 May 2022 20:22:08 +0800
+Subject: [PATCH] Reload mouse & touchpad settings when devices are reconnected
+
+Fixes https://github.com/lxqt/lxqt/issues/2245
+---
+ lxqt-session/src/sessionapplication.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/lxqt-session/src/sessionapplication.cpp b/lxqt-session/src/sessionapplication.cpp
+index 86a7ff1b..97c80974 100644
+--- a/lxqt-session/src/sessionapplication.cpp
++++ b/lxqt-session/src/sessionapplication.cpp
+@@ -91,10 +91,11 @@ bool SessionApplication::startup()
+                 //     but with such a little probablity we can live...
+                 LXQt::Settings settings(configName);
+                 loadKeyboardSettings(settings);
++                QProcess::startDetached(QStringLiteral("lxqt-config-input"), QStringList(QStringLiteral("--load-touchpad")));
+             });
+     connect(dev_notifier, &UdevNotifier::deviceAdded, this, [this, dev_timer] (QString device)
+             {
+-                qCWarning(SESSION) << QStringLiteral("Session '%1', new input device '%2', keyboard setting will be (optionaly) reloaded...").arg(configName,device);
++                qCWarning(SESSION) << QStringLiteral("Session '%1', new input device '%2', keyboard, mouse and touchpad settings will be (optionaly) reloaded...").arg(configName,device);
+                 dev_timer->start();
+             });
+     // Detect display connection:
