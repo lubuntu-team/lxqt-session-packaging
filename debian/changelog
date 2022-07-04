@@ -2,6 +2,9 @@ lxqt-session (1.1.1-0ubuntu2~ppa1) jammy; urgency=medium
 
   * Backport to Jammy.
   * Updated copyright file.
+  * Added Lintian overrides for absent entries in desktop files.
+    - Reasoning: There's no need for any of the fields Lintian's informing
+      us of.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Mon, 04 Jul 2022 12:24:33 -0500
 

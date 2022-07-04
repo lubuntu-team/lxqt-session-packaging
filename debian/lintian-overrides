@@ -1,2 +1,16 @@
 # category LXQt in not yet in freedesktop specs - no bug
 lxqt-session: desktop-entry-invalid-category LXQt usr/share/applications/lxqt-*.desktop
+
+# No need for an icon for this desktop file.
+lxqt-session: desktop-entry-lacks-icon-entry usr/share/xsessions/lxqt.desktop
+
+# Nor do we need keywords for all these things.
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-config-session.desktop                                                                  
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-hibernate.desktop                                                                       
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-leave.desktop                                                                           
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-lockscreen.desktop                                                                      
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-logout.desktop                                                                          
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-reboot.desktop                                                                          
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-shutdown.desktop                                                                        
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-suspend.desktop                                                                         
+lxqt-session: desktop-entry-lacks-keywords-entry usr/share/xsessions/lxqt.desktop
