@@ -9,6 +9,7 @@ lxqt-session (1.1.1-0ubuntu2~ppa1) jammy; urgency=medium
   * Bumped Standards-Version to 4.6.1, no changes necessary.
   * Removed obsolete "-Wl,--as-needed" linker flag.
   * Added "Rules-Requires-Root: no" to debian/control.
+  * Removed trailing whitespace from changelog.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Mon, 04 Jul 2022 12:24:33 -0500
 
@@ -341,4 +342,3 @@ lxqt-session (0.9.0+20150807-1) unstable; urgency=low
   * Initial release (Closes: #747608)
 
  -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 12 Sep 2015 00:05:13 +0800
-
