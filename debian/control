@@ -22,6 +22,7 @@ Vcs-Git: https://phab.lubuntu.me/source/lxqt-session.git
 XS-Debian-Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-session
 XS-Debian-Vcs-Git: https://salsa.debian.org/lxqt-team/lxqt-session.git
 Homepage: https://github.com/lxqt/lxqt-session
+Rules-Requires-Root: no
 
 Package: lxqt-session
 Architecture: any
