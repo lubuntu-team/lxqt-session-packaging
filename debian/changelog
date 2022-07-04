@@ -7,6 +7,7 @@ lxqt-session (1.1.1-0ubuntu2~ppa1) jammy; urgency=medium
       us of.
   * Removed redundant "Repository-Browser" field from d/upstream/metadata.
   * Bumped Standards-Version to 4.6.1, no changes necessary.
+  * Removed obsolete "-Wl,--as-needed" linker flag.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Mon, 04 Jul 2022 12:24:33 -0500
 
