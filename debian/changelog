@@ -1,6 +1,7 @@
 lxqt-session (1.1.1-0ubuntu2~ppa1) jammy; urgency=medium
 
   * Backport to Jammy.
+  * Updated copyright file.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Mon, 04 Jul 2022 12:24:33 -0500
 
