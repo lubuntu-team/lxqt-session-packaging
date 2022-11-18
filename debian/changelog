@@ -1,6 +1,7 @@
 lxqt-session (1.2.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Fix the watch file, for real this time.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 17:42:07 -0600
 
