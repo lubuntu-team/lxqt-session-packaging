@@ -4,6 +4,7 @@ lxqt-session (1.2.0-0ubuntu1) UNRELEASED; urgency=medium
   * Fix the watch file, for real this time.
   * Bump Standards-version to 4.6.1, no changes needed.
   * Lubuntuify the package slightly, to make debhelper happy.
+  * Bump build dependencies in debian/control.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 17:42:07 -0600
 
