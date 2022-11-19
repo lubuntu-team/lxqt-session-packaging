@@ -8,6 +8,7 @@ lxqt-session (1.2.0-0ubuntu1) UNRELEASED; urgency=medium
   * Remove reverse-applicable patch.
   * Update the only Lintian override.
   * Less Rs.
+  * Briefly update copyright.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 17:42:07 -0600
 
