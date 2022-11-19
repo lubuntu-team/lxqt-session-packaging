@@ -1,4 +1,4 @@
-lxqt-session (1.2.0-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-session (1.2.0-0ubuntu1) lunar; urgency=medium
 
   * New upstream release.
   * Fix the watch file, for real this time.
@@ -10,7 +10,7 @@ lxqt-session (1.2.0-0ubuntu1) UNRELEASED; urgency=medium
   * Less Rs.
   * Briefly update copyright.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 17:42:07 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 18:35:56 -0600
 
 lxqt-session (1.1.1-0ubuntu2) kinetic; urgency=medium
 
