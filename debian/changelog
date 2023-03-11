@@ -1,3 +1,9 @@
+lxqt-session (1.2.0-0ubuntu2) lunar; urgency=medium
+
+  * No-change rebuild against libprocps2-0
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 10 Mar 2023 23:09:03 +0000
+
 lxqt-session (1.2.0-0ubuntu1) lunar; urgency=medium
 
   * New upstream release.
