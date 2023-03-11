@@ -9,7 +9,7 @@ Priority: optional
 Build-Depends: debhelper-compat (= 13),
                libkf5windowsystem-dev,
                liblxqt1-dev (>= 1.2.0),
-               libprocps-dev,
+               libproc2-dev,
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libudev-dev [linux-any],

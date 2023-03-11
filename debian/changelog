@@ -1,3 +1,9 @@
+lxqt-session (1.2.0-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Change build dependency libprocps-dev -> libproc2-dev.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 10 Mar 2023 18:11:58 -0800
+
 lxqt-session (1.2.0-0ubuntu2) lunar; urgency=medium
 
   * No-change rebuild against libprocps2-0
