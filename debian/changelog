@@ -1,3 +1,39 @@
+lxqt-session (1.2.0-3ubuntu1) lunar; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - Ensure all proper paths are added to $XDG_CONFIG_DIRS
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 14 Mar 2023 13:30:45 +0100
+
+lxqt-session (1.2.0-3) unstable; urgency=medium
+
+  * Merge to unstable.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Fri, 23 Dec 2022 00:31:41 +0800
+
+lxqt-session (1.2.0-2) experimental; urgency=medium
+
+  * Add patch to use libproc2.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 17 Dec 2022 19:10:39 +0800
+
+lxqt-session (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove unnecessary patch.
+  * Add Rules-Requires-Root: no.
+  * Fix d/lintian-overrides.
+  * Update d/watch for GitHub.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 17 Dec 2022 17:28:26 +0800
+
+lxqt-session (1.2.0-0ubuntu4) lunar; urgency=medium
+
+  * debian/patches/d1db1c791195f3c0cf148e2be8bd46c5a51ca535.patch:
+    - Fix build with libproc2
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 13 Mar 2023 08:52:34 +0100
+
 lxqt-session (1.2.0-0ubuntu3) lunar; urgency=medium
 
   * Change build dependency libprocps-dev -> libproc2-dev.
@@ -24,6 +60,41 @@ lxqt-session (1.2.0-0ubuntu1) lunar; urgency=medium
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 18:35:56 -0600
 
+lxqt-session (1.1.1-2) unstable; urgency=medium
+
+  * Revert previous improper uploaded changes. Reorganize
+    debian/experimental changes:
+    * debian/upstream/signing-key.asc: update.
+    * debian/copyright: update for new upstream changes.
+    * debian/control: build-deps on libprocps-dev and qtxdg-tools.
+    * debian/control: update descriptions for lxqt-session-l10n package.
+    * Added fix-bluetooth-saving-settings.patch: from upstream. See details:
+      https://github.com/lxqt/lxqt-session/pull/438.
+    * debian/lxqt-session.install: update for upstream changes.
+    * debian/lxqt-session-l10n.install: install into
+      /usr/share/lxqt/translations/lxqt-session.
+    * debian/rules: set -DPULL_TRANSLATIONS=OFF.
+  * debian/upstream/metadata: Change Repository-Browser field to
+    Repository-Browse.
+  * debian/rules: Remove unnecessary -Wl,--as-needed.
+  * debian/rules: Drop --fail-missing argument to dh_missing which is now
+    default in debhelper 13.
+  * debian/watch: fix uscan error.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Thu, 27 Oct 2022 13:46:17 +0800
+
+lxqt-session (1.1.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper compat to 13, no changes needed.
+  * Bump build dependencies.
+  * Bump Standards-version to 4.6.1, no changes needed.
+  * Drop some old Breaks/Replaces.
+  * Run wrap-and-sort.
+  * Pull some useful changes from Ubuntu so we can sync.
+
+ -- Simon Quigley <tsimonq2@debian.org>  Wed, 13 Jul 2022 19:57:58 -0500
+
 lxqt-session (1.1.1-0ubuntu2) kinetic; urgency=medium
 
   * Add upstream patch fixing some bluetooth settings.
@@ -39,6 +110,14 @@ lxqt-session (1.1.1-0ubuntu1) kinetic; urgency=medium
   * Remove the old KDM config file, it is no longer shipped upstream.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 01 Jun 2022 16:44:07 -0500
+
+lxqt-session (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bumped Standards-Version to 4.6.0, no changes needed
+  * Update debian/copyright
+
+ -- S. 7 <severusseptimius7@gmail.com>  Thu, 25 Nov 2021 18:19:55 +0200
 
 lxqt-session (0.17.1-0ubuntu1) impish; urgency=medium
 
@@ -353,4 +432,3 @@ lxqt-session (0.9.0+20150807-1) unstable; urgency=low
   * Initial release (Closes: #747608)
 
  -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 12 Sep 2015 00:05:13 +0800
-

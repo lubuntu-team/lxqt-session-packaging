@@ -1,6 +1,5 @@
 Source: lxqt-session
-Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
-XSBC-Original-Maintainer: LXQt Packaging Team <pkg-lxqt-devel@lists.alioth.debian.org>
+Maintainer: LXQt Packaging Team <pkg-lxqt-devel@lists.alioth.debian.org>
 Uploaders: Alf Gaida <agaida@siduction.org>,
            ChangZhuo Chen (陳昌倬) <czchen@debian.org>,
            Andrew Lee (李健秋) <ajqlee@debian.org>
@@ -8,13 +7,13 @@ Section: x11
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
                libkf5windowsystem-dev,
-               liblxqt1-dev (>= 1.2.0),
+               liblxqt1-dev (>= 1.2.0~),
                libproc2-dev,
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libudev-dev [linux-any],
                libx11-dev,
-               qtxdg-tools,
+               qtxdg-tools (>= 3.10.0~),
                xdg-user-dirs
 Standards-Version: 4.6.1
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
@@ -22,6 +21,7 @@ Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging.git
 XS-Debian-Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-session
 XS-Debian-Vcs-Git: https://salsa.debian.org/lxqt-team/lxqt-session.git
 Homepage: https://github.com/lxqt/lxqt-session
+Rules-Requires-Root: no
 
 Package: lxqt-session
 Architecture: any
