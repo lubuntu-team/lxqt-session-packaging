@@ -1,3 +1,9 @@
+lxqt-session (1.2.0-3ubuntu2) lunar; urgency=medium
+
+  * Lubuntuify the Maintainer field.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 15 Mar 2023 12:05:32 -0500
+
 lxqt-session (1.2.0-3ubuntu1) lunar; urgency=low
 
   * Merge from Debian unstable. Remaining changes:
