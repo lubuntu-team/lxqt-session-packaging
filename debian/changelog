@@ -3,6 +3,7 @@ lxqt-session (1.2.0-3ubuntu2) lunar; urgency=medium
   * Lubuntuify the Maintainer field.
   * Restore debian/watch to its original state.
   * Bumepd Standards-Version to 4.6.2, no changes necessary.
+  * Overhauled copyright file.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 15 Mar 2023 12:05:32 -0500
 

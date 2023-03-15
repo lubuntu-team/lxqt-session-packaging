@@ -3,54 +3,16 @@ Upstream-Name: lxqt-session
 Source: https://github.com/lxqt/lxqt-session
 
 Files: *
-Copyright: 2010-2021, LXQt team
-           2010-2013, Razor team
-License: LGPL-2.1+
-
-Files: lxqt-config-session/autostartedit.*
-       lxqt-config-session/autostartitem.*
-       lxqt-config-session/autostartmodel.*
-       lxqt-config-session/autostartpage.*
-       lxqt-config-session/modulemodel.*
-Copyright: 2011-2012 Alec Moskvin <alecm@gmx.com>
-License: LGPL-2.1+
-
-Files: lxqt-config-session/basicsettings.*
-       lxqt-config-session/environmentpage.*
-       lxqt-config-session/main.cpp
-       lxqt-config-session/sessionconfigwindow.*
-Copyright: 2010-2016 LXQt team
-License: LGPL-2.1+
-
-Files: lxqt-config-session/autostartutils.cpp
-       lxqt-config-session/autostartutils.h
-       lxqt-config-session/userlocationspage.cpp
-       lxqt-config-session/userlocationspage.h
-Copyright: 2015, Luís Pereira <luis.artur.pereira@gmail.com>
-License: LGPL-2.1+
-
-Files: lxqt-leave/leavedialog.*
-Copyright: 2010-2016 LXQt team
-License: LGPL-2.1+
-
-Files: lxqt-session/src/UdevNotifier.*
-       lxqt-session/src/lxqtmodman.*
-       lxqt-session/src/sessiondbusadaptor.h
-       lxqt-session/src/windowmanager.*
-       lxqt-session/src/wmselectdialog.*
-Copyright: 2010-2016 LXQt team
-License: LGPL-2.1+
-
-Files: lxqt-session/src/sessionapplication.*
-Copyright: 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
-License: LGPL-2.1+
-
-Files: lxqt-session/src/lockscreenmanager.*
-Copyright: 2016 Paulo Lieuthier <paulolieuthier@gmail.com>
-License: LGPL-2.1+
-
-Files: lxqt-session/src/log.*
-Copyright: 2016 Palo Kisa <palo.kisa@gmail.com>
+Copyright: 2010-2022 LXQt team
+           2015-2021 Palo Kisa <palo.kisa@gmail.com>
+           2010-2018 Petr Vanek <petr@scribus.info>
+           2010-2016 Paulo Lieuthier <paulolieuthier@gmail.com>
+                2015 Luís Pereira <luis.artur.pereira@gmail.com>
+           2010-2014 Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
+           2010-2013 Razor team
+           2011-2012 Alec Moskvin <alecm@gmx.com>
+           2010-2011 Alexander Sokoloff <sokoloff.a@gmail.com>
+           Christopher "VdoP" Regali
 License: LGPL-2.1+
 
 Files: lxqt-session/src/numlock.cpp
@@ -60,11 +22,26 @@ License: MIT
 Comment: Some code is taken from numlockx
 
 Files: debian/*
-Copyright: 2021-2022, Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
-           2014-2019, Alf Gaida <agaida@siduction.org>
-           2015,      Andrew Lee (李健秋) <ajqlee@debian.org>
-           2015,      ChangZhuo Chen (陳昌倬) <czchen@debian.org>
+Copyright: 2021-2023 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+           2014-2019 Alf Gaida <agaida@siduction.org>
+                2015 Andrew Lee (李健秋) <ajqlee@debian.org>
+                2015 ChangZhuo Chen (陳昌倬) <czchen@debian.org>
 License: LGPL-2.1+
+
+License: LGPL-2.1+
+ This program or library is free software; you can redistribute it
+ and/or modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ "/usr/share/common-licenses/LGPL-2.1".
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining
@@ -85,19 +62,3 @@ License: MIT
  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-License: LGPL-2.1+
- This program or library is free software; you can redistribute it
- and/or modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License version 2.1 can be found in
- "/usr/share/common-licenses/LGPL-2.1".
