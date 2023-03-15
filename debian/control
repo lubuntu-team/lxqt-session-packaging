@@ -16,7 +16,7 @@ Build-Depends: debhelper-compat (= 13),
                libx11-dev,
                qtxdg-tools (>= 3.10.0~),
                xdg-user-dirs
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging.git
 XS-Debian-Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-session
