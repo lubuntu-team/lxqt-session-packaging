@@ -2,6 +2,7 @@ lxqt-session (1.3.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Bump build dependencies.
+  * Remove reverse-applicable patch.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 10 Aug 2023 16:39:21 -0500
 
