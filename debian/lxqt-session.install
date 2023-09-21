@@ -19,3 +19,4 @@ usr/share/man/man1/lxqt-leave.1
 usr/share/man/man1/lxqt-session.1
 usr/share/man/man1/startlxqt.1
 usr/share/xsessions/lxqt.desktop
+debian/lxqt-portals.conf /usr/share/xdg-desktop-portal
