@@ -1,3 +1,11 @@
+lxqt-session (1.3.0-0ubuntu3) mantic; urgency=medium
+
+  * Since the LXQt handler is limited in the portals it supports, add KDE and
+    GTK as fallbacks. The GTK fallback needs to be removed once KDE's is
+    better.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 22 Sep 2023 14:22:41 -0500
+
 lxqt-session (1.3.0-0ubuntu2) mantic; urgency=high
 
   * Add /usr/share/xdg-desktop-portal/lxqt-portals.conf, which makes XDG
