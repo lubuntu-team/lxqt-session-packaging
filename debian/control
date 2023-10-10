@@ -40,7 +40,8 @@ Recommends: lxqt-config,
             pcmanfm-qt,
             qlipper,
             qps [linux-any],
-            xdg-desktop-portal-gtk, # Should be removed soon
+#           xdg-desktop-portal-gtk should be removed soon in the future.
+            xdg-desktop-portal-gtk,
             xdg-desktop-portal-kde,
             xdg-desktop-portal-lxqt,
             xscreensaver | gnome-screensaver | light-locker | i3lock | suckless-tools
