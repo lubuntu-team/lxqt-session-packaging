@@ -4,6 +4,8 @@ lxqt-session (1.4.0-0ubuntu1) UNRELEASED; urgency=medium
   * Bump build dependencies.
   * Update copyright years.
   * Wraaaaaaaaaaaaaaaaaaaaaaaaaaaap.
+  * Explicitly depend on dbus-bin, since dbus-update-activation-
+    environment is now directly called.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 12 Nov 2023 18:57:57 -0600
 
