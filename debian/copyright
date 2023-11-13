@@ -3,7 +3,7 @@ Upstream-Name: lxqt-session
 Source: https://github.com/lxqt/lxqt-session
 
 Files: *
-Copyright: 2010-2022 LXQt team
+Copyright: 2010-2023 LXQt team
            2015-2021 Palo Kisa <palo.kisa@gmail.com>
            2010-2018 Petr Vanek <petr@scribus.info>
            2010-2016 Paulo Lieuthier <paulolieuthier@gmail.com>
