@@ -1,3 +1,9 @@
+lxqt-session (1.4.0-0ubuntu2) noble; urgency=medium
+
+  * Add an upstream patch polishing the autostart UX.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 22 Dec 2023 16:32:05 -0600
+
 lxqt-session (1.4.0-0ubuntu1) noble; urgency=medium
 
   * New upstream release.
