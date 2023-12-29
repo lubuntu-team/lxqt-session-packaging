@@ -1,2 +1,3 @@
 ensure-necessary-paths-are-pulled-from.patch
 autostart-ux-polish.patch
+gtk-3-configuration-copy.patch
