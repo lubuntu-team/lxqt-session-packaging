@@ -3,7 +3,7 @@ Upstream-Name: lxqt-session
 Source: https://github.com/lxqt/lxqt-session
 
 Files: *
-Copyright: 2010-2023 LXQt team
+Copyright: 2010-2024 LXQt team
            2015-2021 Palo Kisa <palo.kisa@gmail.com>
            2010-2018 Petr Vanek <petr@scribus.info>
            2010-2016 Paulo Lieuthier <paulolieuthier@gmail.com>
@@ -22,7 +22,7 @@ License: MIT
 Comment: Some code is taken from numlockx
 
 Files: debian/*
-Copyright: 2021-2023 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+Copyright: 2021-2024 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
            2014-2019 Alf Gaida <agaida@siduction.org>
                 2015 Andrew Lee (李健秋) <ajqlee@debian.org>
                 2015 ChangZhuo Chen (陳昌倬) <czchen@debian.org>

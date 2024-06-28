@@ -1,8 +1,9 @@
 lxqt-session (2.0.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update copyright file.
 
- -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 27 Jun 2024 22:32:10 -0500
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 27 Jun 2024 22:33:13 -0500
 
 lxqt-session (1.4.0-0ubuntu3) noble; urgency=medium
 
