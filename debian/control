@@ -7,15 +7,14 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
 Section: x11
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
-               libkf5windowsystem-dev,
-               liblxqt1-dev (>= 1.4.0),
+               libkf6windowsystem-dev,
+               liblxqt2-dev (>= 2.0.0),
                libproc2-dev,
-               libqt5svg5-dev,
-               libqt5x11extras5-dev,
                libudev-dev [linux-any],
                libx11-dev,
-               qtxdg-tools (>= 3.12.0),
-               xdg-user-dirs
+               qtxdg-tools (>= 4.0.0),
+               xdg-user-dirs,
+               qt6-svg-dev
 Standards-Version: 4.6.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging.git
@@ -59,7 +58,7 @@ Package: lxqt-session-l10n
 Architecture: all
 Multi-Arch: foreign
 Section: localization
-Depends: qttranslations5-l10n, ${misc:Depends}
+Depends: qt6-translations-l10n, ${misc:Depends}
 Description: Language package for lxqt-session
  The l10n files for lxqt-session.
  .
