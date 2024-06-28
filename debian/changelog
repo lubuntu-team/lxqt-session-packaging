@@ -2,6 +2,7 @@ lxqt-session (2.0.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update copyright file.
+  * Drop autostart-ux-polish.patch, applied upstream.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 27 Jun 2024 22:33:13 -0500
 
