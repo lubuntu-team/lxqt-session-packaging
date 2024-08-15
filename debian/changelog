@@ -1,4 +1,4 @@
-lxqt-session (2.0.0-0ubuntu1~ppa1) oracular; urgency=medium
+lxqt-session (2.0.0-0ubuntu1) oracular; urgency=medium
 
   * New upstream release.
   * Update copyright file.
@@ -6,7 +6,7 @@ lxqt-session (2.0.0-0ubuntu1~ppa1) oracular; urgency=medium
   * Adjust dependencies.
   * Bump Standards-Version to 4.7.0, no changes necessary.
 
- -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 27 Jun 2024 22:33:13 -0500
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 15 Aug 2024 16:44:52 -0500
 
 lxqt-session (1.4.0-0ubuntu3) noble; urgency=medium
 
