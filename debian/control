@@ -7,17 +7,17 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
 Section: x11
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
-               layer-shell-qt,
-               libkf6windowsystem-dev,
-               liblayershellqtinterface-dev,
-               liblxqt2-dev (>= 2.0.0),
+               layer-shell-qt (>= 6.0.0),
+               libkf6windowsystem-dev (>= 6.0.0),
+               liblayershellqtinterface-dev (>= 6.0.0),
+               liblxqt2-dev (>= 2.1.0),
                libproc2-dev,
                libudev-dev [linux-any],
                libx11-dev,
-               qtxdg-tools (>= 4.0.0),
+               qtxdg-tools (>= 4.1.0),
                xdg-user-dirs,
-               qt6-svg-dev,
-               qt6-wayland-dev
+               qt6-svg-dev (>= 6.6.0),
+               qt6-wayland-dev (>= 6.6.0)
 Standards-Version: 4.7.0
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging.git
@@ -63,6 +63,9 @@ Multi-Arch: foreign
 Section: localization
 Depends: qt6-translations-l10n, ${misc:Depends}
 Description: Language package for lxqt-session
- The l10n files for lxqt-session.
+ LXQt is an advanced, easy-to-use, and fast desktop environment based on
+ Qt technologies.  It has been tailored for users who value simplicity,
+ speed, and an intuitive interface.  Unlike most desktop environments,
+ LXQt also works fine with less powerful machines.
  .
  This package contains the l10n files needed by lxqt-session.
