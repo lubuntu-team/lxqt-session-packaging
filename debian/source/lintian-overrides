@@ -1,0 +1,2 @@
+# We will not be forwarding this patch
+lxqt-session source: patch-not-forwarded-upstream [debian/patches/gtk-3-configuration-copy.patch]

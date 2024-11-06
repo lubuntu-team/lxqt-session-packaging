@@ -14,6 +14,7 @@ usr/share/applications/lxqt-shutdown.desktop
 usr/share/applications/lxqt-suspend.desktop
 usr/share/lxqt/lxqt.conf
 usr/share/lxqt/session.conf
+usr/share/lxqt/waylandwindowmanagers.conf
 usr/share/lxqt/windowmanagers.conf
 usr/share/man/man1/lxqt-config-session.1
 usr/share/man/man1/lxqt-leave.1

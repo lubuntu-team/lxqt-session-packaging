@@ -1,0 +1,4 @@
+# This is expected
+lxqt-session: desktop-entry-lacks-keywords-entry [usr/share/*/*.desktop]
+lxqt-session: desktop-entry-lacks-icon-entry [usr/share/*/*.desktop]
+lxqt-session: desktop-entry-invalid-category LXQt [usr/share/*/*.desktop]
