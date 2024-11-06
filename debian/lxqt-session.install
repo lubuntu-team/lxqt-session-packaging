@@ -1,4 +1,3 @@
-debian/lxqt-portals.conf /usr/share/xdg-desktop-portal
 etc/xdg/autostart/lxqt-xscreensaver-autostart.desktop
 usr/bin/lxqt-config-session
 usr/bin/lxqt-leave
