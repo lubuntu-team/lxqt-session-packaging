@@ -1,8 +1,8 @@
-lxqt-session (2.1.1-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-session (2.1.1-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 11 Jan 2025 16:57:49 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 11 Jan 2025 16:58:40 -0600
 
 lxqt-session (2.1.0-0ubuntu1) plucky; urgency=medium
 
