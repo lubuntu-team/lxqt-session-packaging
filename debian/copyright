@@ -22,7 +22,7 @@ License: MIT
 Comment: Some code is taken from numlockx
 
 Files: debian/*
-Copyright: 2021-2024 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+Copyright: 2021-2025 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
            2014-2019 Alf Gaida <agaida@siduction.org>
                 2015 Andrew Lee (李健秋) <ajqlee@debian.org>
                 2015 ChangZhuo Chen (陳昌倬) <czchen@debian.org>

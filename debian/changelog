@@ -1,3 +1,9 @@
+lxqt-session (2.1.1-0ubuntu2) plucky; urgency=medium
+
+  * Update Standards-Version to 4.7.1, no changes needed.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 21 Feb 2025 16:56:44 -0600
+
 lxqt-session (2.1.1-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.
