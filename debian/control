@@ -10,13 +10,13 @@ Build-Depends: debhelper-compat (= 13),
                layer-shell-qt (>= 6.0.0),
                libkf6windowsystem-dev (>= 6.0.0),
                liblayershellqtinterface-dev (>= 6.0.0),
-               liblxqt2-dev (>= 2.1.0),
+               liblxqt2-dev (>= 2.2.0),
                libproc2-dev,
                libudev-dev [linux-any],
                libx11-dev,
                qt6-svg-dev (>= 6.6.0),
                qt6-wayland-dev (>= 6.6.0),
-               qtxdg-tools (>= 4.1.0),
+               qtxdg-tools (>= 4.2.0),
                xdg-user-dirs
 Standards-Version: 4.7.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
