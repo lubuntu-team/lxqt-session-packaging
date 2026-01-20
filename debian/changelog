@@ -2,6 +2,7 @@ lxqt-session (2.3.0-0ubuntu1) resolute; urgency=medium
 
   * New upstream release.
   * Update copyright file.
+  * Update Standards-Version to 4.7.3, no changes needed.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 20 Jan 2026 16:54:03 -0600
 
