@@ -5,7 +5,6 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
            ChangZhuo Chen (陳昌倬) <czchen@debian.org>,
            Andrew Lee (李健秋) <ajqlee@debian.org>
 Section: x11
-Priority: optional
 Build-Depends: debhelper-compat (= 13),
                layer-shell-qt (>= 6.0.0),
                libkf6windowsystem-dev (>= 6.0.0),
@@ -18,7 +17,7 @@ Build-Depends: debhelper-compat (= 13),
                qt6-wayland-dev (>= 6.6.0),
                qtxdg-tools (>= 4.3.0),
                xdg-user-dirs
-Standards-Version: 4.7.3
+Standards-Version: 4.7.4
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-session-packaging.git
 Debian-Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-session
