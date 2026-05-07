@@ -10,7 +10,7 @@ lxqt-session (2.4.0-0ubuntu1) stonking; urgency=medium
   [ Aaron Rainbolt ]
   * Bump LXQt team copyright year.
 
- -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 06 May 2026 01:43:23 -0400
+ -- Simon Quigley <tsimonq2@debian.org>  Thu, 30 Apr 2026 13:26:12 -0500
 
 lxqt-session (2.3.0-0ubuntu1) resolute; urgency=medium
 
